@@ -1,0 +1,6 @@
+{
+    "bitrate": 40000,
+    "max_bitrate": 40000,
+    "preset": "mq",
+    "rate_control": "VBR"
+}

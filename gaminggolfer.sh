@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ffplay -nodisp -volume 10 -autoexit sounds/rimshot.mp3
+ffplay -nodisp -volume 20 -autoexit sounds/rimshot.mp3
