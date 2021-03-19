@@ -1,8 +1,8 @@
 {
    "cb3b15O1c8TdWl928jM1NG+Rj/LqWXcGOjKCFRxD1og=": {
-      "expiry": 1647628472.585707,
+      "expiry": 1647723458.251212,
       "mode": "force-https",
       "sts_include_subdomains": true,
-      "sts_observed": 1616092472.58571
+      "sts_observed": 1616187458.251215
    }
 }
