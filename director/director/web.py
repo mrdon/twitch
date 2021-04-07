@@ -10,13 +10,15 @@ from typing import Optional
 
 import quart.flask_patch
 from quart import make_response
-from quart import Quart
+from quart import Quart, current_app
 from quart import redirect
 from quart import render_template
 from quart import request
 from quart import url_for
 from quart.exceptions import NotFound
 from quart.exceptions import Unauthorized
+
+from director.obs import DevMattersShow
 
 app = Quart(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "not-so-secret")
@@ -44,7 +46,9 @@ async def start_bot():
     log.info("Starting bot")
     asyncio.create_task(bot.start())
 
-
+    show = DevMattersShow()
+    show.start()
+    current_app.obs = show
 
 
 async def broadcast_to_clients(username: str, maybe_tags: List[str]):
@@ -95,7 +99,23 @@ async def health():
 @app.route("/", methods=["GET"])
 async def index():
     return await render_template(
-        "index.html"
+        "index.html", sections=current_app.obs.sections
+    )
+
+
+@app.route("/button-click")
+async def clicked():
+    scene = request.args.get('scene')
+    section = request.args.get('section')
+    if scene:
+        current_app.obs.set_scene(scene)
+
+    if section:
+        section = current_app.obs.sections[section]
+        current_app.obs.set_section(title=section.title, byline=section.byline)
+
+    return await render_template(
+        "index.html", sections=current_app.obs.sections
     )
 
 

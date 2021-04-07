@@ -2,6 +2,7 @@ import logging
 from functools import wraps
 from string import digits
 
+from quart import current_app
 from twitchio import Context
 from twitchio.ext import commands
 
@@ -25,11 +26,9 @@ class Bot(commands.Bot):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.show = DevMattersShow()
 
     async def event_ready(self):
         print("ready")
-        self.show.start()
         log.info(f"Ready | {self.nick}")
 
     # Commands use a different decorator
@@ -39,7 +38,7 @@ class Bot(commands.Bot):
         arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
         message = sized_truncate(arg_line, 19)
         if message:
-            self.show.set_section(byline=f'"{message}"')
+            current_app.obs.set_section(byline=f'"{message}"')
         # await ctx.send(f'{ctx.author.is_mod} - {arg_line}!')
 
 

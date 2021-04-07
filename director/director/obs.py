@@ -2,6 +2,7 @@ import sys
 import time
 
 import logging
+from dataclasses import dataclass
 from typing import Optional
 
 from obswebsocket.base_classes import Baserequests
@@ -32,10 +33,39 @@ class Connection:
         self.ws.disconnect()
 
 
+@dataclass
+class Section:
+    title: str
+    byline: str
+    b_roll: str = None
+
+
 class DevMattersShow:
-    
+
     def __init__(self):
         self.conn = Connection()
+        self.sections = {
+            "intro": Section(
+                title="Can devs and designers get along?",
+                byline="Guest: Ben Sanders",
+            ),
+            "design-overview": Section(
+                title="Can devs and designers get along?",
+                byline="What does a designer do?",
+            ),
+            "get-alone": Section(
+                title="Can devs and designers get along?",
+                byline="Guest: Ben Sanders",
+            ),
+            "strategies": Section(
+                title="Strategies",
+                byline="What strategies would you recommend?",
+            ),
+            "questions": Section(
+                title="Open Questions",
+                byline="Ok Twitch, what are your questions?",
+            )
+        }
 
     def start(self):
         self.conn.connect()
@@ -49,6 +79,9 @@ class DevMattersShow:
 
     def __exit__(self, type, value, traceback):
         self.end()
+
+    def set_scene(self, name: str):
+        self.conn.call(requests.SetCurrentScene(name))
 
     def set_section(self, title: Optional[str] = None, byline: Optional[str] = None,
                     guest_1_title: Optional[str] = None, guest_2_title: Optional[str] = None, b_roll: Optional[str] = None):

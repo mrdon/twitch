@@ -8,6 +8,16 @@
          div.row {
             padding: 10px;
          }
+         .button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+             font-size: 40pt;
+}
+         button {
+             padding: 80px;
+         }
       </style>
       {% raw %}
       <script id="badge-template" type="text/x-handlebars-template">
@@ -36,15 +46,29 @@
     {% endraw %}
 {% endblock %}
 {% block content %}
-    <div class="container-fluid" id="messages">
-        <div class="row">
-            As people chat in the room, tags will be suggested for the authors.
-            {% if is_guest %}
-            You need to be an authenticated user (i.e. not guest) to click the tags.
-            {% else %}
-            Click on a tag to associate them with the person.
-            {% endif %}
-        </div>
+    <form action="/button-click">
+    <div class="button-grid">
+        <button name="scene" type="submit" value="Interview - me (minimal)">Intro</button>
+        <button name="scene" type="submit" value="Dev Matters - Intro">Title</button>
+        <button name="scene" type="submit" value="Interview - 2 guests">2 People</button>
+        <button name="scene" type="submit" value="Interview - me">Me</button>
+        <button name="scene" type="submit" value="Interview - guest 1">Guest 1</button>
+        <button name="scene" type="submit" value="Interview - me (b-roll)">Me (BR)</button>
+        <button name="scene" type="submit" value="Interview - guest 1 (b-roll)">Guest 1 (BR)</button>
+        {% for key in sections %}
+        <button name="section" type="submit" value="{{ key }}">{{ key }}</button>
+        {% endfor %}
     </div>
-    <script type="text/javascript" src="{{ url_for('static', filename='broadcast.js') }}"></script>
+        </form>
+<!--    <div class="container-fluid" id="messages">-->
+<!--        <div class="row">-->
+<!--            As people chat in the room, tags will be suggested for the authors.-->
+<!--            {% if is_guest %}-->
+<!--            You need to be an authenticated user (i.e. not guest) to click the tags.-->
+<!--            {% else %}-->
+<!--            Click on a tag to associate them with the person.-->
+<!--            {% endif %}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <script type="text/javascript" src="{{ url_for('static', filename='broadcast.js') }}"></script>-->
 {% endblock %}

@@ -1,6 +1,6 @@
 {
-    "current_program_scene": "Interview - 2 guests",
-    "current_scene": "Interview - 2 guests",
+    "current_program_scene": "Coding - Firefox",
+    "current_scene": "Coding - Firefox",
     "current_transition": "Fade",
     "groups": [],
     "modules": {
@@ -290,29 +290,6 @@
         }
     ],
     "sources": [
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "text_ft2_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Credits",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {},
-            "sync": 0,
-            "versioned_id": "text_ft2_source_v2",
-            "volume": 1.0
-        },
         {
             "balance": 0.5,
             "deinterlace_field_order": 0,
@@ -769,7 +746,7 @@
                     "size": 256,
                     "style": "Regular"
                 },
-                "text": "\"Algorithm. Word used by programmers ...\""
+                "text": "\"¶\""
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -4869,7 +4846,6 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Blue texture background": [],
                 "libobs.hide_scene_item.Chat Events": [],
-                "libobs.hide_scene_item.Credits": [],
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
@@ -4879,7 +4855,6 @@
                 "libobs.hide_scene_item.interview - two guests": [],
                 "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Chat Events": [],
-                "libobs.show_scene_item.Credits": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
@@ -5156,35 +5131,6 @@
                         "pos": {
                             "x": 502.0,
                             "y": 194.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 14,
-                        "locked": false,
-                        "name": "Credits",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
