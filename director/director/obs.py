@@ -52,14 +52,17 @@ class DevMattersShow:
             "design-overview": Section(
                 title="Can devs and designers get along?",
                 byline="What does a designer do?",
+                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/What does a designer do.webm"
             ),
-            "get-alone": Section(
+            "get-along": Section(
                 title="Can devs and designers get along?",
                 byline="Guest: Ben Sanders",
+                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/Can devs and designers get along.webm"
             ),
             "strategies": Section(
                 title="Strategies",
                 byline="What strategies would you recommend?",
+                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/Strategies.webm"
             ),
             "questions": Section(
                 title="Open Questions",

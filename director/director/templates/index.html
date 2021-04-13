@@ -1,65 +1,82 @@
 {% extends "layout.html" %}
 {% block title %}Messages{% endblock %}
 {% block head %}
-  {{ super() }}
-  <style type="text/css">
-          div.row:nth-child(even) {background: #EEE}
-         div.row:nth-child(odd) {background: #FFF}
-         div.row {
-            padding: 10px;
-         }
-         .button-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  padding: 10px;
-             font-size: 40pt;
-}
-         button {
-             padding: 80px;
-         }
-      </style>
-      {% raw %}
-      <script id="badge-template" type="text/x-handlebars-template">
-          <span class="badge badge-info badge-tag">{{this}}</span>
-      </script>
-      <script id="tag-template" type="text/x-handlebars-template">
-          <button type="button" class="btn btn-primary btn-tag">{{this}}</button>
-      </script>
-      <script id="message-template" type="text/x-handlebars-template">
-            <div class="col-4">
-                <div class="username">
-                    {{author.username}}
-                </div>
-                <div class="author-tags">
-                    {{#each author.tags}}
-                        {{> badge }}
-                    {{/each}}
-                </div>
-            </div>
-            <div class="col-8">
-                {{#each tags}}
-                    {{> tag }}
-                {{/each}}
-            </div>
-    </script>
-    {% endraw %}
+{{ super() }}
+<style type="text/css">
+    div.row:nth-child(even) {
+        background: #EEE
+    }
+
+    div.row:nth-child(odd) {
+        background: #FFF
+    }
+
+    div.row {
+        padding: 10px;
+    }
+
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+        font-size: 20pt;
+    }
+    .section {
+        background-color: yellow;
+    }
+    .scene {
+        background-color: blue;
+    }
+    button {
+        padding: 20px;
+    }
+</style>
+{% raw %}
+<script id="badge-template" type="text/x-handlebars-template">
+    <span class="badge badge-info badge-tag">{{this}}</span>
+</script>
+<script id="tag-template" type="text/x-handlebars-template">
+    <button type="button" class="btn btn-primary btn-tag">{{this}}</button>
+</script>
+<script id="message-template" type="text/x-handlebars-template">
+    <div class="col-4">
+        <div class="username">
+            {{author.username}}
+        </div>
+        <div class="author-tags">
+            {{#each author.tags}}
+            {{> badge }}
+            {{/each}}
+        </div>
+    </div>
+    <div class="col-8">
+        {{#each tags}}
+        {{> tag }}
+        {{/each}}
+    </div>
+</script>
+{% endraw %}
 {% endblock %}
 {% block content %}
-    <form action="/button-click">
-    <div class="button-grid">
+<form action="/button-click">
+    <div class="button-grid scene">
         <button name="scene" type="submit" value="Interview - me (minimal)">Intro</button>
         <button name="scene" type="submit" value="Dev Matters - Intro">Title</button>
         <button name="scene" type="submit" value="Interview - 2 guests">2 People</button>
         <button name="scene" type="submit" value="Interview - me">Me</button>
-        <button name="scene" type="submit" value="Interview - guest 1">Guest 1</button>
         <button name="scene" type="submit" value="Interview - me (b-roll)">Me (BR)</button>
+        <button name="scene" type="submit" value="Dev Matters - Commercial">Commercial</button>
+        <button name="scene" type="submit" value="Interview - guest 1">Guest 1</button>
         <button name="scene" type="submit" value="Interview - guest 1 (b-roll)">Guest 1 (BR)</button>
+    </div>
+    <div class="button-grid section">
         {% for key in sections %}
         <button name="section" type="submit" value="{{ key }}">{{ key }}</button>
         {% endfor %}
     </div>
-        </form>
+
+</form>
 <!--    <div class="container-fluid" id="messages">-->
 <!--        <div class="row">-->
 <!--            As people chat in the room, tags will be suggested for the authors.-->

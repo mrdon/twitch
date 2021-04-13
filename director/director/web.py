@@ -112,7 +112,7 @@ async def clicked():
 
     if section:
         section = current_app.obs.sections[section]
-        current_app.obs.set_section(title=section.title, byline=section.byline)
+        current_app.obs.set_section(title=section.title, byline=section.byline, b_roll=section.b_roll)
 
     return await render_template(
         "index.html", sections=current_app.obs.sections

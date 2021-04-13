@@ -1,6 +1,6 @@
 {
-    "current_program_scene": "Interview - me (b-roll)",
-    "current_scene": "Interview - me (b-roll)",
+    "current_program_scene": "Coding - Firefox",
+    "current_scene": "Coding - Firefox",
     "current_transition": "Fade",
     "groups": [],
     "modules": {
@@ -67,6 +67,9 @@
                 },
                 {
                     "pauseScene": "Dev Matters - Commercial"
+                },
+                {
+                    "pauseScene": "Coding - Full"
                 }
             ],
             "pauseTabPos": 2,
@@ -226,6 +229,9 @@
             "name": "Coding - Terminal"
         },
         {
+            "name": "Coding - Full"
+        },
+        {
             "name": "Be right back"
         },
         {
@@ -284,6 +290,443 @@
         }
     ],
     "sources": [
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Chat Events": [],
+                "libobs.hide_scene_item.Events": [],
+                "libobs.hide_scene_item.Mic": [],
+                "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.[Ninja] Scene 1": [],
+                "libobs.hide_scene_item.[Scene] Twitch - spotify": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Full": [],
+                "libobs.show_scene_item.Chat Events": [],
+                "libobs.show_scene_item.Events": [],
+                "libobs.show_scene_item.Mic": [],
+                "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.[Ninja] Scene 1": [],
+                "libobs.show_scene_item.[Scene] Twitch - spotify": [],
+                "libobs.show_scene_item.[Scene] Webcam - Full": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Coding - Full",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 11,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Mic",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": false,
+                        "name": "[Scene] Webcam - Full",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 296,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 11,
+                        "locked": false,
+                        "name": "[Ninja] Scene 1",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.51108372211456299,
+                            "y": 0.51111114025115967
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": true,
+                        "name": "Chat Events",
+                        "pos": {
+                            "x": 1452.0,
+                            "y": 104.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": false,
+                        "name": "Events",
+                        "pos": {
+                            "x": 434.0,
+                            "y": 258.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 299,
+                        "crop_right": 0,
+                        "crop_top": 4,
+                        "group_item_backup": false,
+                        "id": 9,
+                        "locked": true,
+                        "name": "[Scene] Twitch - spotify",
+                        "pos": {
+                            "x": 310.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "linuxbrowser.reloadpage": []
+            },
+            "id": "linuxbrowser-source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "interview - chat",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 1080,
+                "hide_scrollbars": false,
+                "url": "https://streamelements.com/overlay/606e2b516377571deb3a155e/_ArQsigAlTTSkjBdCVSKfIsgj5aLImYEBX1sYa-YHNAyniRs",
+                "width": 1920
+            },
+            "sync": 0,
+            "versioned_id": "linuxbrowser-source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": true,
+            "name": "interview - guest b-roll (overlay)",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": false,
+                "hw_decode": true,
+                "local_file": "/home/mrdon/dev/twitch/interview/overlays-with-chat/1 Guest Plus BRoll + Chats.mov.webm",
+                "looping": true,
+                "restart_on_activate": false
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": true,
+            "name": "interview - guest b-roll (mask)",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": false,
+                "hw_decode": true,
+                "local_file": "/home/mrdon/dev/twitch/interview/overlays-with-chat/1 Guest Plus BRoll + Chats_MASK-BG.mov.webm",
+                "looping": true,
+                "restart_on_activate": false
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "interview - two tuests (overlay)",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": false,
+                "hw_decode": true,
+                "local_file": "/home/mrdon/dev/twitch/interview/overlays-with-chat/2 Guests + Chats.mov.webm",
+                "looping": true,
+                "restart_on_activate": false
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "interview - two guests (background)",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": false,
+                "hw_decode": true,
+                "local_file": "/home/mrdon/dev/twitch/interview/overlays-with-chat/2 Guests + Chats_MASK-BG.mov.webm",
+                "looping": true,
+                "restart_on_activate": false
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
         {
             "balance": 0.5,
             "deinterlace_field_order": 0,
@@ -389,16 +832,10 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Blue texture background": [],
-                "libobs.hide_scene_item.Chat Events": [],
-                "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
-                "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Full": [],
                 "libobs.show_scene_item.Blue texture background": [],
-                "libobs.show_scene_item.Chat Events": [],
-                "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
-                "libobs.show_scene_item.System sound": [],
                 "libobs.show_scene_item.[Scene] Webcam - Full": []
             },
             "id": "scene",
@@ -502,93 +939,6 @@
                         },
                         "scale_filter": "disable",
                         "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 5,
-                        "locked": true,
-                        "name": "System sound",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 6,
-                        "locked": false,
-                        "name": "Chat Events",
-                        "pos": {
-                            "x": 1480.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 7,
-                        "locked": true,
-                        "name": "Events",
-                        "pos": {
-                            "x": 558.0,
-                            "y": 207.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
                     }
                 ]
             },
@@ -604,14 +954,12 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Chat Events": [],
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Interview - guest (b-roll)": [],
                 "libobs.hide_scene_item.[Scene] Interview - lower third": [],
-                "libobs.show_scene_item.Chat Events": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
@@ -648,7 +996,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 4,
-                        "locked": false,
+                        "locked": true,
                         "name": "[Ninja] Scene 1",
                         "pos": {
                             "x": 45.0,
@@ -677,7 +1025,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 8,
-                        "locked": false,
+                        "locked": true,
                         "name": "[Scene] Interview - guest (b-roll)",
                         "pos": {
                             "x": 0.0,
@@ -706,7 +1054,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 3,
-                        "locked": false,
+                        "locked": true,
                         "name": "[Scene] Interview - lower third",
                         "pos": {
                             "x": 0.0,
@@ -792,37 +1140,8 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 9,
-                        "locked": false,
-                        "name": "Chat Events",
-                        "pos": {
-                            "x": 46.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.85000002384185791,
-                            "y": 0.85000002384185791
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
                         "id": 10,
-                        "locked": false,
+                        "locked": true,
                         "name": "Events",
                         "pos": {
                             "x": 0.0,
@@ -850,50 +1169,15 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "MediaSource.Pause": [],
-                "MediaSource.Play": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Stop": [],
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 255,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "interview - one guest broll",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "clear_on_media_end": false,
-                "hw_decode": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/overlays - new/1 Guest Plus BRoll.smaller.mov",
-                "looping": true
-            },
-            "sync": 0,
-            "versioned_id": "ffmpeg_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Blue texture background": [],
                 "libobs.hide_scene_item.[Scene] B-roll": [],
-                "libobs.hide_scene_item.interview - one guest broll": [],
-                "libobs.show_scene_item.Blue texture background": [],
+                "libobs.hide_scene_item.interview - chat": [],
+                "libobs.hide_scene_item.interview - guest b-roll (mask)": [],
+                "libobs.hide_scene_item.interview - guest b-roll (overlay)": [],
                 "libobs.show_scene_item.[Scene] B-roll": [],
-                "libobs.show_scene_item.interview - one guest broll": []
+                "libobs.show_scene_item.interview - chat": [],
+                "libobs.show_scene_item.interview - guest b-roll (mask)": [],
+                "libobs.show_scene_item.interview - guest b-roll (overlay)": []
             },
             "id": "scene",
             "mixers": 0,
@@ -908,37 +1192,8 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 6,
+                "id_counter": 9,
                 "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 37,
-                        "crop_right": 1040,
-                        "crop_top": 230,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": false,
-                        "name": "Blue texture background",
-                        "pos": {
-                            "x": 59.0,
-                            "y": 419.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.42941758036613464,
-                            "y": 0.42952379584312439
-                        },
-                        "scale_filter": "disable",
-                        "visible": false
-                    },
                     {
                         "align": 5,
                         "bounds": {
@@ -956,7 +1211,7 @@
                         "locked": false,
                         "name": "[Scene] B-roll",
                         "pos": {
-                            "x": 419.0,
+                            "x": 420.0,
                             "y": 59.0
                         },
                         "private_settings": {},
@@ -981,9 +1236,67 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 6,
+                        "id": 7,
+                        "locked": true,
+                        "name": "interview - guest b-roll (mask)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 9,
                         "locked": false,
-                        "name": "interview - one guest broll",
+                        "name": "interview - chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": true,
+                        "name": "interview - guest b-roll (overlay)",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1011,14 +1324,14 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Chat Events": [],
+                "libobs.hide_scene_item.Blue texture background": [],
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.[Scene] Interview - guest (b-roll)": [],
                 "libobs.hide_scene_item.[Scene] Interview - lower third": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Full": [],
-                "libobs.show_scene_item.Chat Events": [],
+                "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
@@ -1039,7 +1352,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 9,
+                "id_counter": 10,
                 "items": [
                     {
                         "align": 5,
@@ -1054,8 +1367,66 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 6,
+                        "id": 10,
+                        "locked": true,
+                        "name": "Blue texture background",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 611,
+                        "crop_right": 437,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
                         "locked": false,
+                        "name": "[Scene] Webcam - Full",
+                        "pos": {
+                            "x": 59.0,
+                            "y": 418.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.41628441214561462,
+                            "y": 0.4166666567325592
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": true,
                         "name": "[Scene] Interview - guest (b-roll)",
                         "pos": {
                             "x": 0.0,
@@ -1108,35 +1479,6 @@
                         "bounds_align": 0,
                         "bounds_type": 0,
                         "crop_bottom": 0,
-                        "crop_left": 611,
-                        "crop_right": 437,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": false,
-                        "name": "[Scene] Webcam - Full",
-                        "pos": {
-                            "x": 60.0,
-                            "y": 423.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.41163557767868042,
-                            "y": 0.41111111640930176
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
                         "crop_left": 0,
                         "crop_right": 0,
                         "crop_top": 0,
@@ -1199,22 +1541,60 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 7,
-                        "locked": false,
-                        "name": "Chat Events",
+                        "id": 8,
+                        "locked": true,
+                        "name": "Events",
                         "pos": {
-                            "x": 50.0,
+                            "x": 0.0,
                             "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.85000002384185791,
-                            "y": 0.85000002384185791
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
-                    },
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.[Scene] Interview - lower third": [],
+                "libobs.hide_scene_item.interview - chat": [],
+                "libobs.hide_scene_item.interview - guest (mask)": [],
+                "libobs.hide_scene_item.interview - guest (overlay)": [],
+                "libobs.show_scene_item.[Scene] Interview - lower third": [],
+                "libobs.show_scene_item.interview - chat": [],
+                "libobs.show_scene_item.interview - guest (mask)": [],
+                "libobs.show_scene_item.interview - guest (overlay)": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "[Scene] Interview - guest",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 9,
+                "items": [
                     {
                         "align": 5,
                         "bounds": {
@@ -1228,9 +1608,9 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 8,
+                        "id": 6,
                         "locked": false,
-                        "name": "Events",
+                        "name": "interview - guest (mask)",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1259,7 +1639,65 @@
                         "group_item_backup": false,
                         "id": 9,
                         "locked": false,
-                        "name": "Chat Events",
+                        "name": "interview - chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": false,
+                        "name": "interview - guest (overlay)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": false,
+                        "name": "[Scene] Interview - lower third",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1288,144 +1726,13 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Blue texture background": [],
-                "libobs.hide_scene_item.interview - one guest full": [],
-                "libobs.show_scene_item.Blue texture background": [],
-                "libobs.show_scene_item.interview - one guest full": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "[Scene] Interview - guest",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 5,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": false,
-                        "name": "Blue texture background",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 5,
-                        "locked": false,
-                        "name": "interview - one guest full",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "MediaSource.Pause": [],
-                "MediaSource.Play": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Stop": [],
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 255,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "interview - one guest full",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "clear_on_media_end": false,
-                "hw_decode": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/overlays - new/1 Guest.smaller.mov",
-                "looping": true
-            },
-            "sync": 0,
-            "versioned_id": "ffmpeg_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Chat Events": [],
                 "libobs.hide_scene_item.Events": [],
-                "libobs.hide_scene_item.Interview - lower third me": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.[Scene] Interview - guest": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Full": [],
-                "libobs.show_scene_item.Chat Events": [],
+                "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Events": [],
-                "libobs.show_scene_item.Interview - lower third me": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
                 "libobs.show_scene_item.[Scene] Interview - guest": [],
@@ -1437,14 +1744,16 @@
             "muted": false,
             "name": "Interview - me",
             "prev_ver": 436273153,
-            "private_settings": {},
+            "private_settings": {
+                "transition": "Cut"
+            },
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 12,
+                "id_counter": 13,
                 "items": [
                     {
                         "align": 5,
@@ -1459,9 +1768,9 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 10,
+                        "id": 13,
                         "locked": false,
-                        "name": "[Scene] Interview - guest",
+                        "name": "Blue texture background",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1517,18 +1826,18 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 4,
+                        "id": 10,
                         "locked": false,
-                        "name": "Interview - lower third me",
+                        "name": "[Scene] Interview - guest",
                         "pos": {
-                            "x": 54.0,
-                            "y": 902.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.38243627548217773,
-                            "y": 0.38260868191719055
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1580,35 +1889,6 @@
                         "name": "System sound",
                         "pos": {
                             "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 11,
-                        "locked": false,
-                        "name": "Chat Events",
-                        "pos": {
-                            "x": 1480.0,
                             "y": 0.0
                         },
                         "private_settings": {},
@@ -1662,62 +1942,27 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "MediaSource.Pause": [],
-                "MediaSource.Play": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Stop": [],
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 255,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "interview - two guests",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "clear_on_media_end": false,
-                "hw_decode": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/overlays - new/2 Guests.smaller.mov",
-                "looping": true
-            },
-            "sync": 0,
-            "versioned_id": "ffmpeg_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Blue texture background": [],
-                "libobs.hide_scene_item.Chat Events": [],
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Interview - lower third": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Full": [],
-                "libobs.hide_scene_item.interview - two guests": [],
+                "libobs.hide_scene_item.interview - chat": [],
+                "libobs.hide_scene_item.interview - two guests (background)": [],
+                "libobs.hide_scene_item.interview - two tuests (overlay)": [],
                 "libobs.show_scene_item.Blue texture background": [],
-                "libobs.show_scene_item.Chat Events": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
                 "libobs.show_scene_item.[Ninja] Scene 1": [],
                 "libobs.show_scene_item.[Scene] Interview - lower third": [],
                 "libobs.show_scene_item.[Scene] Webcam - Full": [],
-                "libobs.show_scene_item.interview - two guests": []
+                "libobs.show_scene_item.interview - chat": [],
+                "libobs.show_scene_item.interview - two guests (background)": [],
+                "libobs.show_scene_item.interview - two tuests (overlay)": []
             },
             "id": "scene",
             "mixers": 0,
@@ -1734,7 +1979,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 14,
+                "id_counter": 17,
                 "items": [
                     {
                         "align": 5,
@@ -1750,7 +1995,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 3,
-                        "locked": false,
+                        "locked": true,
                         "name": "Blue texture background",
                         "pos": {
                             "x": 959.0,
@@ -1779,17 +2024,17 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 5,
-                        "locked": false,
+                        "locked": true,
                         "name": "[Scene] Webcam - Full",
                         "pos": {
-                            "x": 961.0,
-                            "y": 69.0
+                            "x": 959.0,
+                            "y": 60.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.74485594034194946,
-                            "y": 0.74444442987442017
+                            "x": 0.75,
+                            "y": 0.75
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1803,22 +2048,22 @@
                         "bounds_align": 0,
                         "bounds_type": 0,
                         "crop_bottom": 0,
-                        "crop_left": 297,
-                        "crop_right": 398,
-                        "crop_top": 16,
+                        "crop_left": 357,
+                        "crop_right": 335,
+                        "crop_top": 0,
                         "group_item_backup": false,
                         "id": 6,
                         "locked": false,
                         "name": "[Ninja] Scene 1",
                         "pos": {
-                            "x": 61.0,
-                            "y": 92.0
+                            "x": 56.7958984375,
+                            "y": 55.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.73306125402450562,
-                            "y": 0.73333334922790527
+                            "x": 0.73469388484954834,
+                            "y": 0.73496240377426147
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -1866,7 +2111,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 9,
-                        "locked": false,
+                        "locked": true,
                         "name": "Mic",
                         "pos": {
                             "x": 0.0,
@@ -1894,9 +2139,67 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 11,
-                        "locked": false,
-                        "name": "interview - two guests",
+                        "id": 15,
+                        "locked": true,
+                        "name": "interview - two guests (background)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 17,
+                        "locked": true,
+                        "name": "interview - chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 16,
+                        "locked": true,
+                        "name": "interview - two tuests (overlay)",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1952,37 +2255,8 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 12,
-                        "locked": false,
-                        "name": "Chat Events",
-                        "pos": {
-                            "x": 1480.0,
-                            "y": 580.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
                         "id": 13,
-                        "locked": false,
+                        "locked": true,
                         "name": "Events",
                         "pos": {
                             "x": 502.0,
@@ -2032,7 +2306,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "hw_decode": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/dev-matters-dev-metrics.mp4"
+                "local_file": "/home/mrdon/dev/twitch/interview/dev-matters-s01e02-intro.mp4"
             },
             "sync": 0,
             "versioned_id": "ffmpeg_source",
@@ -2121,14 +2395,17 @@
             "muted": true,
             "name": "b-roll",
             "prev_ver": 436273153,
-            "private_settings": {},
+            "private_settings": {
+                "mixer_hidden": true
+            },
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
+                "hw_decode": true,
                 "is_local_file": true,
-                "local_file": "/home/mrdon/Videos/dev-matters-q3-broll.mp4",
+                "local_file": "/home/mrdon/dev/twitch/interview/B-ROLL/Strategies.webm",
                 "looping": true,
                 "restart_on_activate": false,
                 "setVisible": true
@@ -2227,37 +2504,6 @@
             },
             "sync": 0,
             "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "text_ft2_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Interview - lower third me",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "font": {
-                    "face": "Proxima Nova",
-                    "flags": 1,
-                    "size": 256,
-                    "style": "Semibold"
-                },
-                "text": "Don - Sleuth"
-            },
-            "sync": 0,
-            "versioned_id": "text_ft2_source_v2",
             "volume": 1.0
         },
         {
@@ -2858,6 +3104,7 @@
                 "libobs.hide_scene_item.Terminal": [],
                 "libobs.hide_scene_item.Top right": [],
                 "libobs.hide_scene_item.Webcam": [],
+                "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Twitch - spotify": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Corner": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Corner shadow": [],
@@ -2868,6 +3115,7 @@
                 "libobs.show_scene_item.Terminal": [],
                 "libobs.show_scene_item.Top right": [],
                 "libobs.show_scene_item.Webcam": [],
+                "libobs.show_scene_item.[Ninja] Scene 1": [],
                 "libobs.show_scene_item.[Scene] Twitch - spotify": [],
                 "libobs.show_scene_item.[Scene] Webcam - Corner": [],
                 "libobs.show_scene_item.[Scene] Webcam - Corner shadow": []
@@ -2885,7 +3133,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 17,
+                "id_counter": 18,
                 "items": [
                     {
                         "align": 5,
@@ -3173,6 +3421,35 @@
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 18,
+                        "locked": false,
+                        "name": "[Ninja] Scene 1",
+                        "pos": {
+                            "x": 1268.0,
+                            "y": 230.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.33958333730697632,
+                            "y": 0.33981481194496155
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -3613,7 +3890,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 22,
+                "id_counter": 23,
                 "items": [
                     {
                         "align": 5,
@@ -3984,7 +4261,7 @@
             },
             "sync": 185000000,
             "versioned_id": "pulse_input_capture",
-            "volume": 0.40074935555458069
+            "volume": 0.50122964382171631
         },
         {
             "balance": 0.5,
@@ -3999,7 +4276,7 @@
                 "libobs.unmute": []
             },
             "id": "pulse_output_capture",
-            "mixers": 241,
+            "mixers": 245,
             "monitoring_type": 0,
             "muted": false,
             "name": "System sound",
@@ -4014,7 +4291,7 @@
             },
             "sync": 0,
             "versioned_id": "pulse_output_capture",
-            "volume": 0.67813336849212646
+            "volume": 0.26147478818893433
         },
         {
             "balance": 0.5,
@@ -4085,7 +4362,7 @@
                     "balance": 0.5,
                     "deinterlace_field_order": 0,
                     "deinterlace_mode": 0,
-                    "enabled": true,
+                    "enabled": false,
                     "flags": 0,
                     "hotkeys": {},
                     "id": "chroma_key_filter",
@@ -4240,7 +4517,7 @@
                         "contrast": 0.46999999999999997,
                         "gamma": 0.55000000000000004,
                         "hue_shift": 0.47999999999999998,
-                        "saturation": 0.41999999999999998
+                        "saturation": 0.19
                     },
                     "sync": 0,
                     "versioned_id": "color_filter",
@@ -4340,7 +4617,7 @@
                 "Focus, Auto": true,
                 "color_range": 2,
                 "device_id": "/dev/video0",
-                "framerate": -1,
+                "framerate": 65566,
                 "input": 0,
                 "pixelformat": 842093913,
                 "resolution": 125830200
@@ -4457,7 +4734,7 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "capture_window": "107018149\r\nreddit: the front page of the internet — Mozilla Firefox\r\nNavigator",
+                "capture_window": "37748739\r\nMozilla Firefox\r\nNavigator",
                 "include_border": false,
                 "lock_x": false,
                 "show_cursor": true
@@ -5659,7 +5936,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 5,
+                "id_counter": 9,
                 "items": [
                     {
                         "align": 5,
@@ -6081,7 +6358,7 @@
                     "size": 256,
                     "style": "Semibold"
                 },
-                "text": "ACCELERATE METRICS"
+                "text": "Open Questions"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -6112,7 +6389,7 @@
                     "size": 256,
                     "style": "Regular"
                 },
-                "text": "\"¶\""
+                "text": "Ok Twitch, what are your questions?"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -6144,7 +6421,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 2,
+                "id_counter": 3,
                 "items": [
                     {
                         "align": 5,
@@ -6163,14 +6440,14 @@
                         "locked": false,
                         "name": "Interview bottom title",
                         "pos": {
-                            "x": 65.0,
-                            "y": 868.35858154296875
+                            "x": 67.0,
+                            "y": 813.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.30331385135650635,
-                            "y": 0.30278885364532471
+                            "x": 0.29027432203292847,
+                            "y": 0.288808673620224
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6192,14 +6469,14 @@
                         "locked": false,
                         "name": "Interview bottom title line 2",
                         "pos": {
-                            "x": 65.0,
-                            "y": 938.0
+                            "x": 67.0,
+                            "y": 886.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.25886166095733643,
-                            "y": 0.25762712955474854
+                            "x": 0.21901758015155792,
+                            "y": 0.21739129722118378
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6218,16 +6495,14 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Chat Events": [],
+                "libobs.hide_scene_item.Blue texture background": [],
                 "libobs.hide_scene_item.Events": [],
-                "libobs.hide_scene_item.Interview - lower third guest 1": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Interview - guest": [],
-                "libobs.show_scene_item.Chat Events": [],
+                "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Events": [],
-                "libobs.show_scene_item.Interview - lower third guest 1": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
                 "libobs.show_scene_item.[Ninja] Scene 1": [],
@@ -6239,14 +6514,16 @@
             "muted": false,
             "name": "Interview - guest 1",
             "prev_ver": 436273153,
-            "private_settings": {},
+            "private_settings": {
+                "transition": "Cut"
+            },
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 14,
+                "id_counter": 15,
                 "items": [
                     {
                         "align": 5,
@@ -6261,9 +6538,9 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 12,
-                        "locked": false,
-                        "name": "[Scene] Interview - guest",
+                        "id": 15,
+                        "locked": true,
+                        "name": "Blue texture background",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -6294,8 +6571,8 @@
                         "locked": false,
                         "name": "[Ninja] Scene 1",
                         "pos": {
-                            "x": 262.0,
-                            "y": 88.0
+                            "x": 263.0,
+                            "y": 60.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -6319,18 +6596,18 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 9,
-                        "locked": false,
-                        "name": "Interview - lower third guest 1",
+                        "id": 12,
+                        "locked": true,
+                        "name": "[Scene] Interview - guest",
                         "pos": {
-                            "x": 54.0,
-                            "y": 902.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.38243627548217773,
-                            "y": 0.38260868191719055
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6378,7 +6655,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 6,
-                        "locked": false,
+                        "locked": true,
                         "name": "System sound",
                         "pos": {
                             "x": 0.0,
@@ -6406,37 +6683,8 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 13,
-                        "locked": false,
-                        "name": "Chat Events",
-                        "pos": {
-                            "x": 1480.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
                         "id": 14,
-                        "locked": false,
+                        "locked": true,
                         "name": "Events",
                         "pos": {
                             "x": 1120.0,
@@ -6455,37 +6703,6 @@
             },
             "sync": 0,
             "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "text_ft2_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Interview - lower third guest 1",
-            "prev_ver": 436273153,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "font": {
-                    "face": "Proxima Nova",
-                    "flags": 1,
-                    "size": 256,
-                    "style": "Semibold"
-                },
-                "text": "Dylan Etkin - Sleuth"
-            },
-            "sync": 0,
-            "versioned_id": "text_ft2_source_v2",
             "volume": 1.0
         },
         {
@@ -6547,6 +6764,86 @@
             },
             "sync": 0,
             "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": true,
+            "name": "interview - guest (mask)",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": false,
+                "hw_decode": true,
+                "local_file": "/home/mrdon/dev/twitch/interview/overlays-with-chat/1 Guest + Chats_MASK-BG.mov.webm",
+                "looping": true,
+                "restart_on_activate": false
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": true,
+            "name": "interview - guest (overlay)",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": false,
+                "hw_decode": true,
+                "local_file": "/home/mrdon/dev/twitch/interview/overlays-with-chat/1 Guest + Chats.mov.webm",
+                "looping": true,
+                "restart_on_activate": false
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
             "volume": 1.0
         }
     ],
