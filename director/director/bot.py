@@ -6,6 +6,8 @@ from quart import current_app
 from twitchio import Context
 from twitchio.ext import commands
 
+from director import logo
+from director.logo import Preset
 from director.obs import DevMattersShow
 
 log = logging.getLogger(__name__)
@@ -40,6 +42,14 @@ class Bot(commands.Bot):
         if message:
             current_app.obs.set_section(byline=f'"{message}"')
         # await ctx.send(f'{ctx.author.is_mod} - {arg_line}!')
+
+    @commands.command(name='flash')
+    async def flash(self, ctx: Context):
+        await logo.flash(Preset.FLASH)
+
+    @commands.command(name='reset')
+    async def reset(self, ctx: Context):
+        await logo.flash(Preset.DEFAULT)
 
 
 def sized_truncate(content, length, suffix='...'):

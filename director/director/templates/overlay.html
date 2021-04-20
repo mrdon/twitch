@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - Director</title>
+    {% endblock %}
+  </head>
+  <body>
+    <main class="container-fluid" role="main">
+        {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

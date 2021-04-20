@@ -4,6 +4,9 @@ twitchio
 
 hypercorn
 quart
+python-dotenv
+
+wled
 
 black
 reorder-python-imports

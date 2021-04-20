@@ -1,6 +1,6 @@
 {
-    "current_program_scene": "Coding - Firefox",
-    "current_scene": "Coding - Firefox",
+    "current_program_scene": "Coding - Full",
+    "current_scene": "Coding - Full",
     "current_transition": "Fade",
     "groups": [],
     "modules": {
@@ -141,9 +141,9 @@
                     "focus": true,
                     "fullscreen": false,
                     "maximized": false,
-                    "scene": "Coding - Pycharm",
+                    "scene": "Coding - Terminal",
                     "transition": "Fade",
-                    "window_title": "director"
+                    "window_title": "Terminal"
                 },
                 {
                     "focus": true,
@@ -298,6 +298,7 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Blue texture background": [],
                 "libobs.hide_scene_item.Chat Events": [],
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
@@ -305,6 +306,7 @@
                 "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Twitch - spotify": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Full": [],
+                "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Chat Events": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
@@ -326,7 +328,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 11,
+                "id_counter": 12,
                 "items": [
                     {
                         "align": 5,
@@ -373,6 +375,35 @@
                         "id": 2,
                         "locked": false,
                         "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 12,
+                        "locked": false,
+                        "name": "Blue texture background",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1753,7 +1784,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 13,
+                "id_counter": 14,
                 "items": [
                     {
                         "align": 5,
@@ -2405,7 +2436,7 @@
             "settings": {
                 "hw_decode": true,
                 "is_local_file": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/B-ROLL/Strategies.webm",
+                "local_file": "/home/mrdon/dev/twitch/interview/B-ROLL/Can devs and designers get along.webm",
                 "looping": true,
                 "restart_on_activate": false,
                 "setVisible": true
@@ -3204,10 +3235,10 @@
                         "crop_bottom": 0,
                         "crop_left": 37,
                         "crop_right": 0,
-                        "crop_top": 201,
+                        "crop_top": 219,
                         "group_item_backup": false,
                         "id": 11,
-                        "locked": true,
+                        "locked": false,
                         "name": "Terminal",
                         "pos": {
                             "x": 0.0,
@@ -3527,7 +3558,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 17,
+                "id_counter": 18,
                 "items": [
                     {
                         "align": 5,
@@ -3864,7 +3895,6 @@
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
                 "libobs.hide_scene_item.Webcam": [],
-                "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Twitch - spotify": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Corner": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Corner shadow": [],
@@ -3874,7 +3904,6 @@
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
                 "libobs.show_scene_item.Webcam": [],
-                "libobs.show_scene_item.[Ninja] Scene 1": [],
                 "libobs.show_scene_item.[Scene] Twitch - spotify": [],
                 "libobs.show_scene_item.[Scene] Webcam - Corner": [],
                 "libobs.show_scene_item.[Scene] Webcam - Corner shadow": []
@@ -3961,7 +3990,7 @@
                         "bounds_align": 0,
                         "bounds_type": 0,
                         "crop_bottom": 0,
-                        "crop_left": 405,
+                        "crop_left": 425,
                         "crop_right": 0,
                         "crop_top": 183,
                         "group_item_backup": false,
@@ -3975,8 +4004,8 @@
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.49545809626579285,
-                            "y": 0.495644211769104
+                            "x": 0.49831300973892212,
+                            "y": 0.49839374423027039
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -4154,35 +4183,6 @@
                         },
                         "scale_filter": "disable",
                         "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 23,
-                        "locked": false,
-                        "name": "[Ninja] Scene 1",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
                     }
                 ]
             },
@@ -4322,7 +4322,7 @@
             },
             "sync": 0,
             "versioned_id": "pulse_output_capture",
-            "volume": 0.26147478818893433
+            "volume": 1.0
         },
         {
             "balance": 0.5,
@@ -4393,7 +4393,7 @@
                     "balance": 0.5,
                     "deinterlace_field_order": 0,
                     "deinterlace_mode": 0,
-                    "enabled": false,
+                    "enabled": true,
                     "flags": 0,
                     "hotkeys": {},
                     "id": "chroma_key_filter",
@@ -4409,10 +4409,10 @@
                     "push-to-talk-delay": 0,
                     "settings": {
                         "brightness": 0.0,
-                        "key_color": 4284128018,
+                        "key_color": 4283344446,
                         "key_color_type": "custom",
-                        "similarity": 114,
-                        "smoothness": 114,
+                        "similarity": 91,
+                        "smoothness": 100,
                         "spill": 159
                     },
                     "sync": 0,
@@ -5914,7 +5914,7 @@
                         "bounds_type": 0,
                         "crop_bottom": 0,
                         "crop_left": 426,
-                        "crop_right": 18,
+                        "crop_right": 36,
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 1,
@@ -5922,13 +5922,13 @@
                         "name": "Webcam",
                         "pos": {
                             "x": 1920.0,
-                            "y": 598.0
+                            "y": 570.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": -0.44647696614265442,
-                            "y": 0.44629630446434021
+                            "x": -0.51851850748062134,
+                            "y": 0.51851850748062134
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6016,13 +6016,13 @@
                         "name": "Webcam",
                         "pos": {
                             "x": 0.0,
-                            "y": -47.0
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 1.0432292222976685,
-                            "y": 1.0435185432434082
+                            "x": 1.0187499523162842,
+                            "y": 1.0185185670852661
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6389,7 +6389,7 @@
                     "size": 256,
                     "style": "Semibold"
                 },
-                "text": "Open Questions"
+                "text": "Can devs and designers get along?"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -6420,7 +6420,7 @@
                     "size": 256,
                     "style": "Regular"
                 },
-                "text": "Ok Twitch, what are your questions?"
+                "text": "Guest: Ben Sanders"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",

@@ -44,64 +44,64 @@
             "_id": 5,
             "availability": 1.0,
             "default": false,
-            "name": "US Central: Houston, TX",
-            "url_template": "rtmp://hou.contribute.live-video.net/app/{stream_key}",
+            "name": "US West: San Jose, CA (2)",
+            "url_template": "rtmp://sjc02.contribute.live-video.net/app/{stream_key}",
             "priority": 5
         },
         {
             "_id": 6,
             "availability": 1.0,
             "default": false,
-            "name": "US West: San Jose, CA (2)",
-            "url_template": "rtmp://sjc02.contribute.live-video.net/app/{stream_key}",
+            "name": "US West: San Jose, CA (5)",
+            "url_template": "rtmp://sjc05.contribute.live-video.net/app/{stream_key}",
             "priority": 6
         },
         {
             "_id": 7,
             "availability": 1.0,
-            "default": false,
-            "name": "US West: San Jose, CA (5)",
-            "url_template": "rtmp://sjc05.contribute.live-video.net/app/{stream_key}",
+            "default": true,
+            "name": "US West: San Francisco, CA",
+            "url_template": "rtmp://sfo.contribute.live-video.net/app/{stream_key}",
             "priority": 7
         },
         {
             "_id": 8,
             "availability": 1.0,
             "default": false,
-            "name": "US East: Chicago, IL (3)",
-            "url_template": "rtmp://ord03.contribute.live-video.net/app/{stream_key}",
+            "name": "US West: Portland, OR",
+            "url_template": "rtmp://pdx.contribute.live-video.net/app/{stream_key}",
             "priority": 8
         },
         {
             "_id": 9,
             "availability": 1.0,
             "default": false,
-            "name": "US East: Chicago, IL (2)",
-            "url_template": "rtmp://ord02.contribute.live-video.net/app/{stream_key}",
+            "name": "US Central: Houston, TX",
+            "url_template": "rtmp://hou.contribute.live-video.net/app/{stream_key}",
             "priority": 9
         },
         {
             "_id": 10,
             "availability": 1.0,
-            "default": true,
-            "name": "US West: San Francisco, CA",
-            "url_template": "rtmp://sfo.contribute.live-video.net/app/{stream_key}",
+            "default": false,
+            "name": "US West: Seattle, WA",
+            "url_template": "rtmp://sea.contribute.live-video.net/app/{stream_key}",
             "priority": 10
         },
         {
             "_id": 11,
             "availability": 1.0,
             "default": false,
-            "name": "US West: Portland, OR",
-            "url_template": "rtmp://pdx.contribute.live-video.net/app/{stream_key}",
+            "name": "US East: Chicago, IL (3)",
+            "url_template": "rtmp://ord03.contribute.live-video.net/app/{stream_key}",
             "priority": 11
         },
         {
             "_id": 12,
             "availability": 1.0,
             "default": false,
-            "name": "US West: Seattle, WA",
-            "url_template": "rtmp://sea.contribute.live-video.net/app/{stream_key}",
+            "name": "US East: Chicago, IL (2)",
+            "url_template": "rtmp://ord02.contribute.live-video.net/app/{stream_key}",
             "priority": 12
         },
         {
@@ -116,24 +116,24 @@
             "_id": 14,
             "availability": 1.0,
             "default": false,
-            "name": "NA: Canada, Toronto",
-            "url_template": "rtmp://yto.contribute.live-video.net/app/{stream_key}",
+            "name": "NA: Mexico, Queretaro (2)",
+            "url_template": "rtmp://qro02.contribute.live-video.net/app/{stream_key}",
             "priority": 14
         },
         {
             "_id": 15,
             "availability": 1.0,
             "default": false,
-            "name": "NA: Mexico, Queretaro (2)",
-            "url_template": "rtmp://qro02.contribute.live-video.net/app/{stream_key}",
+            "name": "NA: Mexico, Queretaro (1)",
+            "url_template": "rtmp://qro01.contribute.live-video.net/app/{stream_key}",
             "priority": 15
         },
         {
             "_id": 16,
             "availability": 1.0,
             "default": false,
-            "name": "NA: Mexico, Queretaro (1)",
-            "url_template": "rtmp://qro01.contribute.live-video.net/app/{stream_key}",
+            "name": "NA: Canada, Toronto",
+            "url_template": "rtmp://yto.contribute.live-video.net/app/{stream_key}",
             "priority": 16
         },
         {
@@ -428,16 +428,16 @@
             "_id": 53,
             "availability": 1.0,
             "default": false,
-            "name": "Asia: India, Mumbai",
-            "url_template": "rtmp://bom01.contribute.live-video.net/app/{stream_key}",
+            "name": "Asia: Thailand, Bangkok",
+            "url_template": "rtmp://bkk.contribute.live-video.net/app/{stream_key}",
             "priority": 53
         },
         {
             "_id": 54,
             "availability": 1.0,
             "default": false,
-            "name": "Asia: Thailand, Bangkok",
-            "url_template": "rtmp://bkk.contribute.live-video.net/app/{stream_key}",
+            "name": "Asia: India, Mumbai",
+            "url_template": "rtmp://bom01.contribute.live-video.net/app/{stream_key}",
             "priority": 54
         },
         {

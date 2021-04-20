@@ -84,6 +84,11 @@ class DevMattersShow:
         self.end()
 
     def set_scene(self, name: str):
+        if "(b-roll)" in name:
+            self.conn.call(requests.PlayPauseMedia("b-roll", False))
+        else:
+            self.conn.call(requests.PlayPauseMedia("b-roll", True))
+
         self.conn.call(requests.SetCurrentScene(name))
 
     def set_section(self, title: Optional[str] = None, byline: Optional[str] = None,

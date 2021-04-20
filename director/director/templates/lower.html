@@ -1,0 +1,20 @@
+{% extends "overlay.html" %}
+{% block title %}Lower{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='lower.css') }}">
+
+{% endblock %}
+{% block content %}
+<main>
+<div id="animation-1" class="animation">
+    <div class="red">/</div>
+    <div class="white light mask">
+      <div>{{line_1}}</div>
+    </div>
+    <div class="white light mask">
+      <div>{{ line_2 }}</div>
+    </div>
+  </div>
+    </main>
+{% endblock %}

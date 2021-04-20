@@ -19,6 +19,7 @@ from quart.exceptions import NotFound
 from quart.exceptions import Unauthorized
 
 from director.obs import DevMattersShow
+from director.tau import TauClient
 
 app = Quart(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "not-so-secret")
@@ -33,6 +34,8 @@ log = logging.getLogger(__name__)
 @app.before_serving
 async def start_bot():
     from director.bot import Bot
+    tau_client = TauClient()
+    await tau_client.connect()
 
     bot = Bot(
         # set up the bot
@@ -100,6 +103,13 @@ async def health():
 async def index():
     return await render_template(
         "index.html", sections=current_app.obs.sections
+    )
+
+
+@app.route("/lower", methods=["GET"])
+async def lower_thirds():
+    return await render_template(
+        "lower.html", line_1="Don Brown", line_2="Co-founder Sleuth"
     )
 
 
