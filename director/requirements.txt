@@ -86,6 +86,8 @@ pytest==6.2.2
     # via -r requirements.in
 python-dotenv==0.17.0
     # via -r requirements.in
+pyyaml==5.4.1
+    # via -r requirements.in
 quart==0.14.1
     # via -r requirements.in
 regex==2021.3.17

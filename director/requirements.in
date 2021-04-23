@@ -5,6 +5,7 @@ twitchio
 hypercorn
 quart
 python-dotenv
+pyyaml
 
 wled
 

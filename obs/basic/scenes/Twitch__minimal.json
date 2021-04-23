@@ -69,7 +69,10 @@
                     "pauseScene": "Dev Matters - Commercial"
                 },
                 {
-                    "pauseScene": "Coding - Full"
+                    "pauseScene": "Interview - me (firefox)"
+                },
+                {
+                    "pauseScene": "Interview - guest 1 (firefox)"
                 }
             ],
             "pauseTabPos": 2,
@@ -238,6 +241,15 @@
             "name": "Conference"
         },
         {
+            "name": "Zoom - Firefox"
+        },
+        {
+            "name": "Zoom - Pycharm"
+        },
+        {
+            "name": "Zoom - Slack"
+        },
+        {
             "name": "Interview - me (minimal)"
         },
         {
@@ -253,13 +265,19 @@
             "name": "Interview - me"
         },
         {
-            "name": "Interview - guest 1"
-        },
-        {
             "name": "Interview - me (b-roll)"
         },
         {
+            "name": "Interview - me (firefox)"
+        },
+        {
+            "name": "Interview - guest 1"
+        },
+        {
             "name": "Interview - guest 1 (b-roll)"
+        },
+        {
+            "name": "Interview - guest 1 (firefox)"
         },
         {
             "name": "[Scene] Webcam - Full"
@@ -290,6 +308,626 @@
         }
     ],
     "sources": [
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "linuxbrowser.reloadpage": []
+            },
+            "id": "linuxbrowser-source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Title - guest 1",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "reload_on_scene": true,
+                "url": "http://10.76.5.52:8000/lower?name=guest1"
+            },
+            "sync": 0,
+            "versioned_id": "linuxbrowser-source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Mic": [],
+                "libobs.hide_scene_item.Slack": [],
+                "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Corner": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Corner shadow": [],
+                "libobs.show_scene_item.Mic": [],
+                "libobs.show_scene_item.Slack": [],
+                "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.[Scene] Webcam - Corner": [],
+                "libobs.show_scene_item.[Scene] Webcam - Corner shadow": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Zoom - Slack",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "transition": "Fade"
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 6,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Mic",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": true,
+                        "name": "[Scene] Webcam - Corner shadow",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 10.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": true,
+                        "name": "[Scene] Webcam - Corner",
+                        "pos": {
+                            "x": 10.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 590,
+                        "crop_right": 0,
+                        "crop_top": 46,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": false,
+                        "name": "Slack",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.91977953910827637,
+                            "y": 0.91993182897567749
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Mic": [],
+                "libobs.hide_scene_item.PyCharm": [],
+                "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.Top right": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Corner": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Corner shadow": [],
+                "libobs.show_scene_item.Mic": [],
+                "libobs.show_scene_item.PyCharm": [],
+                "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.Top right": [],
+                "libobs.show_scene_item.[Scene] Webcam - Corner": [],
+                "libobs.show_scene_item.[Scene] Webcam - Corner shadow": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Zoom - Pycharm",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "transition": "Fade"
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 10,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Mic",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "PyCharm",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 635,
+                        "crop_left": 1236,
+                        "crop_right": 0,
+                        "crop_top": 59,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "Top right",
+                        "pos": {
+                            "x": 0.0,
+                            "y": -3.9024999141693115
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.49586039781570435,
+                            "y": 0.49583828449249268
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": true,
+                        "name": "[Scene] Webcam - Corner shadow",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 10.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 9,
+                        "locked": true,
+                        "name": "[Scene] Webcam - Corner",
+                        "pos": {
+                            "x": 10.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Firefox": [],
+                "libobs.hide_scene_item.Mic": [],
+                "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Corner": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Corner shadow": [],
+                "libobs.show_scene_item.Firefox": [],
+                "libobs.show_scene_item.Mic": [],
+                "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.[Scene] Webcam - Corner": [],
+                "libobs.show_scene_item.[Scene] Webcam - Corner shadow": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Zoom - Firefox",
+            "prev_ver": 436273153,
+            "private_settings": {
+                "transition": "Fade"
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 9,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "Mic",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 425,
+                        "crop_right": 0,
+                        "crop_top": 183,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "Firefox",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.49831300973892212,
+                            "y": 0.49839374423027039
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": true,
+                        "name": "[Scene] Webcam - Corner shadow",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 10.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": true,
+                        "name": "[Scene] Webcam - Corner",
+                        "pos": {
+                            "x": 10.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
         {
             "balance": 0.5,
             "deinterlace_field_order": 0,
@@ -1760,12 +2398,14 @@
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.Title - me": [],
                 "libobs.hide_scene_item.[Scene] Interview - guest": [],
                 "libobs.hide_scene_item.[Scene] Webcam - Full": [],
                 "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.Title - me": [],
                 "libobs.show_scene_item.[Scene] Interview - guest": [],
                 "libobs.show_scene_item.[Scene] Webcam - Full": []
             },
@@ -1784,7 +2424,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 14,
+                "id_counter": 15,
                 "items": [
                     {
                         "align": 5,
@@ -1956,6 +2596,35 @@
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 15,
+                        "locked": false,
+                        "name": "Title - me",
+                        "pos": {
+                            "x": 75.0,
+                            "y": 709.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.528749942779541,
+                            "y": 1.528333306312561
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -2337,7 +3006,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "hw_decode": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/dev-matters-s01e02-intro.mp4"
+                "local_file": "/home/mrdon/Videos/s1e03-title.mp4"
             },
             "sync": 0,
             "versioned_id": "ffmpeg_source",
@@ -2436,7 +3105,7 @@
             "settings": {
                 "hw_decode": true,
                 "is_local_file": true,
-                "local_file": "/home/mrdon/dev/twitch/interview/B-ROLL/Can devs and designers get along.webm",
+                "local_file": "/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Broll 2 NEW.webm",
                 "looping": true,
                 "restart_on_activate": false,
                 "setVisible": true
@@ -4322,7 +4991,7 @@
             },
             "sync": 0,
             "versioned_id": "pulse_output_capture",
-            "volume": 1.0
+            "volume": 0.90407449007034302
         },
         {
             "balance": 0.5,
@@ -4544,11 +5213,11 @@
                     "push-to-talk": false,
                     "push-to-talk-delay": 0,
                     "settings": {
-                        "brightness": -0.040000000000000001,
-                        "contrast": 0.46999999999999997,
-                        "gamma": 0.55000000000000004,
+                        "brightness": -0.02,
+                        "contrast": 0.89000000000000001,
+                        "gamma": 0.68999999999999995,
                         "hue_shift": 0.47999999999999998,
-                        "saturation": 0.19
+                        "saturation": 0.26000000000000001
                     },
                     "sync": 0,
                     "versioned_id": "color_filter",
@@ -5983,7 +6652,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 4,
-                        "locked": false,
+                        "locked": true,
                         "name": "green",
                         "pos": {
                             "x": 0.0,
@@ -6021,8 +6690,8 @@
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 1.0187499523162842,
-                            "y": 1.0185185670852661
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6041,7 +6710,7 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 5,
-                        "locked": false,
+                        "locked": true,
                         "name": "Mic",
                         "pos": {
                             "x": 0.0,
@@ -6389,7 +7058,7 @@
                     "size": 256,
                     "style": "Semibold"
                 },
-                "text": "Can devs and designers get along?"
+                "text": "Open Questions"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -6420,7 +7089,7 @@
                     "size": 256,
                     "style": "Regular"
                 },
-                "text": "Guest: Ben Sanders"
+                "text": "Ok Twitch, what are your questions?"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -6472,13 +7141,13 @@
                         "name": "Interview bottom title",
                         "pos": {
                             "x": 67.0,
-                            "y": 813.0
+                            "y": 831.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.29027432203292847,
-                            "y": 0.288808673620224
+                            "x": 0.22209435701370239,
+                            "y": 0.22382672131061554
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6501,13 +7170,13 @@
                         "name": "Interview bottom title line 2",
                         "pos": {
                             "x": 67.0,
-                            "y": 886.0
+                            "y": 891.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.21901758015155792,
-                            "y": 0.21739129722118378
+                            "x": 0.15222711861133575,
+                            "y": 0.15162454545497894
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -6530,12 +7199,14 @@
                 "libobs.hide_scene_item.Events": [],
                 "libobs.hide_scene_item.Mic": [],
                 "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.Title - guest 1": [],
                 "libobs.hide_scene_item.[Ninja] Scene 1": [],
                 "libobs.hide_scene_item.[Scene] Interview - guest": [],
                 "libobs.show_scene_item.Blue texture background": [],
                 "libobs.show_scene_item.Events": [],
                 "libobs.show_scene_item.Mic": [],
                 "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.Title - guest 1": [],
                 "libobs.show_scene_item.[Ninja] Scene 1": [],
                 "libobs.show_scene_item.[Scene] Interview - guest": []
             },
@@ -6554,7 +7225,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 15,
+                "id_counter": 16,
                 "items": [
                     {
                         "align": 5,
@@ -6729,6 +7400,35 @@
                         },
                         "scale_filter": "disable",
                         "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 16,
+                        "locked": false,
+                        "name": "Title - guest 1",
+                        "pos": {
+                            "x": 75.0,
+                            "y": 709.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.528749942779541,
+                            "y": 1.528333306312561
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
                     }
                 ]
             },
@@ -6875,6 +7575,739 @@
             },
             "sync": 0,
             "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "xcomposite_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Slack",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "capture_window": "58720261\r\nSlack | tools | leadership\r\nslack"
+            },
+            "sync": 0,
+            "versioned_id": "xcomposite_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Blue texture background": [],
+                "libobs.hide_scene_item.Events": [],
+                "libobs.hide_scene_item.Firefox": [],
+                "libobs.hide_scene_item.Mic": [],
+                "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.[Scene] Interview - lower third": [],
+                "libobs.hide_scene_item.[Scene] Webcam - Full": [],
+                "libobs.hide_scene_item.interview - chat": [],
+                "libobs.hide_scene_item.interview - guest b-roll (mask)": [],
+                "libobs.hide_scene_item.interview - guest b-roll (overlay)": [],
+                "libobs.show_scene_item.Blue texture background": [],
+                "libobs.show_scene_item.Events": [],
+                "libobs.show_scene_item.Firefox": [],
+                "libobs.show_scene_item.Mic": [],
+                "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.[Scene] Interview - lower third": [],
+                "libobs.show_scene_item.[Scene] Webcam - Full": [],
+                "libobs.show_scene_item.interview - chat": [],
+                "libobs.show_scene_item.interview - guest b-roll (mask)": [],
+                "libobs.show_scene_item.interview - guest b-roll (overlay)": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Interview - me (firefox)",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 12,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": true,
+                        "name": "Blue texture background",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 611,
+                        "crop_right": 437,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "[Scene] Webcam - Full",
+                        "pos": {
+                            "x": 59.0,
+                            "y": 418.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.41628441214561462,
+                            "y": 0.4166666567325592
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 425,
+                        "crop_right": 0,
+                        "crop_top": 183,
+                        "group_item_backup": false,
+                        "id": 12,
+                        "locked": false,
+                        "name": "Firefox",
+                        "pos": {
+                            "x": 422.0,
+                            "y": 57.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.3737347424030304,
+                            "y": 0.37390905618667603
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 11,
+                        "locked": false,
+                        "name": "interview - guest b-roll (mask)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": false,
+                        "name": "interview - chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 9,
+                        "locked": false,
+                        "name": "interview - guest b-roll (overlay)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": true,
+                        "name": "[Scene] Interview - lower third",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": true,
+                        "name": "Mic",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": true,
+                        "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": true,
+                        "name": "Events",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Blue texture background": [],
+                "libobs.hide_scene_item.Events": [],
+                "libobs.hide_scene_item.Firefox": [],
+                "libobs.hide_scene_item.Mic": [],
+                "libobs.hide_scene_item.System sound": [],
+                "libobs.hide_scene_item.[Ninja] Scene 1": [],
+                "libobs.hide_scene_item.[Scene] Interview - lower third": [],
+                "libobs.hide_scene_item.interview - chat": [],
+                "libobs.hide_scene_item.interview - guest b-roll (mask)": [],
+                "libobs.hide_scene_item.interview - guest b-roll (overlay)": [],
+                "libobs.show_scene_item.Blue texture background": [],
+                "libobs.show_scene_item.Events": [],
+                "libobs.show_scene_item.Firefox": [],
+                "libobs.show_scene_item.Mic": [],
+                "libobs.show_scene_item.System sound": [],
+                "libobs.show_scene_item.[Ninja] Scene 1": [],
+                "libobs.show_scene_item.[Scene] Interview - lower third": [],
+                "libobs.show_scene_item.interview - chat": [],
+                "libobs.show_scene_item.interview - guest b-roll (mask)": [],
+                "libobs.show_scene_item.interview - guest b-roll (overlay)": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Interview - guest 1 (firefox)",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 11,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": true,
+                        "name": "Blue texture background",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 514,
+                        "crop_right": 518,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 11,
+                        "locked": false,
+                        "name": "[Ninja] Scene 1",
+                        "pos": {
+                            "x": 45.0,
+                            "y": 416.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.4211711585521698,
+                            "y": 0.42129629850387573
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 425,
+                        "crop_right": 0,
+                        "crop_top": 183,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "Firefox",
+                        "pos": {
+                            "x": 422.0,
+                            "y": 57.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.3737347424030304,
+                            "y": 0.37390905618667603
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "interview - guest b-roll (mask)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": false,
+                        "name": "interview - chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": false,
+                        "name": "interview - guest b-roll (overlay)",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": true,
+                        "name": "[Scene] Interview - lower third",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": true,
+                        "name": "Mic",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 9,
+                        "locked": true,
+                        "name": "System sound",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": true,
+                        "name": "Events",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "linuxbrowser.reloadpage": []
+            },
+            "id": "linuxbrowser-source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Title - me",
+            "prev_ver": 436273153,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "reload_on_scene": true,
+                "url": "http://10.76.5.52:8000/lower?name=me"
+            },
+            "sync": 0,
+            "versioned_id": "linuxbrowser-source",
             "volume": 1.0
         }
     ],

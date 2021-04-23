@@ -9,6 +9,7 @@ from typing import List
 from typing import Optional
 
 import quart.flask_patch
+import yaml
 from quart import make_response
 from quart import Quart, current_app
 from quart import redirect
@@ -18,8 +19,15 @@ from quart import url_for
 from quart.exceptions import NotFound
 from quart.exceptions import Unauthorized
 
-from director.obs import DevMattersShow
+from director.obs import DevMattersShow, Section, Scene, Show, load_show
 from director.tau import TauClient
+
+try:
+    from yaml import CLoader as Loader, CDumper as Dumper
+except ImportError:
+    from yaml import Loader, Dumper
+
+
 
 app = Quart(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "not-so-secret")
@@ -99,34 +107,45 @@ async def health():
     return "UP", 200
 
 
-@app.route("/", methods=["GET"])
-async def index():
+@app.route("/show/<show_name>", methods=["GET"])
+async def get_show(show_name):
+    show = load_show(show_name)
+
     return await render_template(
-        "index.html", sections=current_app.obs.sections
+        "index.html", sections=show.sections, scenes=show.scenes, show=show.name
     )
 
 
 @app.route("/lower", methods=["GET"])
 async def lower_thirds():
+    name = request.args.get("name")
+    if name == "me":
+        line_1 = "Don Brown"
+        line_2 = "Co-founder/CTO Sleuth"
+    else:
+        line_1 = "Dylan Etkin"
+        line_2 = "Co-founder/CEO Sleuth"
     return await render_template(
-        "lower.html", line_1="Don Brown", line_2="Co-founder Sleuth"
+        "lower.html", line_1=line_1, line_2=line_2
     )
 
 
 @app.route("/button-click")
 async def clicked():
-    scene = request.args.get('scene')
-    section = request.args.get('section')
-    if scene:
-        current_app.obs.set_scene(scene)
+    show_name = request.args.get('show')
+    scene_name = request.args.get('scene')
+    section_name = request.args.get('section')
 
-    if section:
-        section = current_app.obs.sections[section]
+    show = load_show(show_name)
+
+    if scene_name:
+        current_app.obs.set_scene(scene_name)
+
+    if section_name:
+        section = show.sections[section_name]
         current_app.obs.set_section(title=section.title, byline=section.byline, b_roll=section.b_roll)
 
-    return await render_template(
-        "index.html", sections=current_app.obs.sections
-    )
+    return redirect(url_for('get_show', show_name=show.name))
 
 
 @app.route("/sse")

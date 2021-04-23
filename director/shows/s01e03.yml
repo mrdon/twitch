@@ -1,0 +1,47 @@
+show:
+  me: 
+    name: Don Brown
+    title: Co-founder/CTO Sleuth
+  guests:
+    - name: Dylan Etkin
+      title: Co-founder/CEO Sleuth
+  scenes:
+    - label: Intro
+      obs_name: "Interview - me (minimal)"
+    - label: "Title"
+      obs_name: "Dev Matters - Intro"
+    - label: "2 People"
+      obs_name: "Interview - 2 guests"
+    - label: "Me"
+      obs_name: "Interview - me"
+    - label: "Me (BR)"
+      obs_name: "Interview - me (b-roll)"
+    - label: "Me (Browser)"
+      obs_name: "Interview - me (firefox)"
+    - label: "Commercial"
+      obs_name: "Dev Matters - Commercial"
+    - label: "Guest 1"
+      obs_name: "Interview - guest 1"
+    - label: "Guest 1 (BR)"
+      obs_name: "Interview - guest 1 (b-roll)"
+    - label: "Guest 1 (Browser)"
+      obs_name: "Interview - guest 1 (firefox)"
+  sections:
+    intro:
+      title: How NOT to go from side project to startup
+      byline: Dylan Etkin | @detkin
+    types:
+      title: Which side projects make terrible startups?
+      byline: "Hint: your game engine is one"
+      b_roll: "/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Broll 1 NEW.webm"
+    sleuth-story:
+      title: The Sleuth story
+      byline: "Where did Dylan mess up? :)"
+      b_roll: "/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Sleuth Story.webm"
+    lessons-learned: 
+      title: Lessons learned
+      byline: Tips for your side project
+      b_roll: "/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Broll 2 NEW.webm"
+    questions:
+      title: Open Questions
+      byline: Ok Twitch, what are your questions?

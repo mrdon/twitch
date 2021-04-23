@@ -1,11 +1,23 @@
+from __future__ import annotations
 import sys
 import time
 
 import logging
 from dataclasses import dataclass
-from typing import Optional
+from datetime import datetime
+from typing import Optional, List, Dict
 
+import yaml
 from obswebsocket.base_classes import Baserequests
+
+try:
+    from yaml import CLoader as Loader, CDumper as Dumper
+except ImportError:
+    from yaml import Loader, Dumper
+
+
+log = logging.getLogger(__name__)
+
 
 FFMPEG_SOURCE = "ffmpeg_source"
 
@@ -33,11 +45,49 @@ class Connection:
         self.ws.disconnect()
 
 
+shows = {}
+
+
+def load_show(show_name: str):
+    if show_name not in shows:
+        shows[show_name] = Show(show_name)
+
+    return shows[show_name]
+
+
+class Show:
+
+    def __init__(self, show_name: str):
+        self.name = show_name
+        started = datetime.now()
+        with open(f"shows/{show_name}.yml", "r") as f:
+            data = yaml.load(f, Loader=Loader)["show"]
+
+        self.sections: Dict[str, Section] = {}
+        for key, sdata in data["sections"].items():
+            self.sections[key] = Section(title=sdata["title"],
+                                    byline=sdata["byline"],
+                                    b_roll=sdata.get("b_roll"))
+
+        self.scenes: List[Scene] = []
+        for sdata in data["scenes"]:
+            self.scenes.append(Scene(label=sdata["label"], obs_name=sdata["obs_name"]))
+
+        elapsed = (datetime.now() - started).total_seconds()
+        log.info(f"Took {elapsed} second(s) ")
+
+
 @dataclass
 class Section:
     title: str
     byline: str
     b_roll: str = None
+
+
+@dataclass
+class Scene:
+    label: str
+    obs_name: str
 
 
 class DevMattersShow:
@@ -46,23 +96,23 @@ class DevMattersShow:
         self.conn = Connection()
         self.sections = {
             "intro": Section(
-                title="Can devs and designers get along?",
-                byline="Guest: Ben Sanders",
+                title="How NOT to go from side project to startup",
+                byline="Dylan Etkin | @detkin",
             ),
-            "design-overview": Section(
-                title="Can devs and designers get along?",
-                byline="What does a designer do?",
-                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/What does a designer do.webm"
+            "types": Section(
+                title="Which side projects make terrible startups?",
+                byline="Hint: your game engine is one",
+                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Broll 1 NEW.webm"
             ),
-            "get-along": Section(
-                title="Can devs and designers get along?",
-                byline="Guest: Ben Sanders",
-                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/Can devs and designers get along.webm"
+            "sleuth-story": Section(
+                title="The Sleuth story",
+                byline="Where did Dylan mess up? :)",
+                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Sleuth Story.webm"
             ),
-            "strategies": Section(
-                title="Strategies",
-                byline="What strategies would you recommend?",
-                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/Strategies.webm"
+            "lessons-learned": Section(
+                title="Lessons learned",
+                byline="Tips for your side project",
+                b_roll="/home/mrdon/dev/twitch/interview/B-ROLL/s1e03/Side Project Broll 2 NEW.webm"
             ),
             "questions": Section(
                 title="Open Questions",
