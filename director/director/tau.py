@@ -19,12 +19,13 @@ log = logging.getLogger(__name__)
 class TauClient:
     def __init__(self):
         self.tau_token = os.getenv("TAU_TOKEN")
+        self.tau_url = os.getenv("TAU_URL")
         self._running = False
 
     async def connect(self):
         session = aiohttp.ClientSession()
         ws = await session.ws_connect(
-            'http://localhost:8085/ws/twitch-events/')
+            f'{self.tau_url}/ws/twitch-events/')
 
         print("sending token")
         await ws.send_str(json.dumps(dict(token=self.tau_token)))

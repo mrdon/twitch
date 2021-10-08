@@ -1,0 +1,13 @@
+schedule:
+    defaults:
+        duration: 2h
+        notify_discord: -30m
+
+    events:
+    - start: "2021-10-12T15:00"
+      title: "[Go/Python] Writing a terraform provider"
+      duration: 4h
+      notify_discord: -60m
+    - start: "2021-10-14T15:00"
+      title: "[Python] Pull reviews, why they suck, automating Github"
+
