@@ -36,6 +36,8 @@ click==7.1.2
     # via
     #   black
     #   quart
+evdev==1.4.0
+    # via -r requirements.in
 h11==0.12.0
     # via
     #   hypercorn
@@ -84,6 +86,8 @@ pyparsing==2.4.7
     # via packaging
 pytest==6.2.2
     # via -r requirements.in
+python-dateutil==2.8.2
+    # via -r requirements.in
 python-dotenv==0.17.0
     # via -r requirements.in
 pyyaml==5.4.1
@@ -97,6 +101,7 @@ reorder-python-imports==2.4.0
 six==1.15.0
     # via
     #   obs-websocket-py
+    #   python-dateutil
     #   websocket-client
 toml==0.10.2
     # via

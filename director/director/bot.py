@@ -17,7 +17,7 @@ def require_mod(func):
     @wraps(func)
     async def inner(self, ctx: Context, *args, **kwargs):
         if not ctx.author.is_mod:
-            await ctx.send(f'Not a mod!')
+            await ctx.send(f'@{ctx.author.display_name} is not a mod')
             return
         return await func(self, ctx, *args, **kwargs)
 
@@ -35,10 +35,10 @@ class Bot(commands.Bot):
 
     # Commands use a different decorator
     @commands.command(name='quote')
-    @require_mod
+    # @require_mod
     async def my_command(self, ctx: Context):
         arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
-        message = sized_truncate(arg_line, 19)
+        message = sized_truncate(arg_line, 35)
         if message:
             current_app.obs.set_section(byline=f'"{message}"')
         # await ctx.send(f'{ctx.author.is_mod} - {arg_line}!')

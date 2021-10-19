@@ -22,4 +22,4 @@ COPY director /app/director
 EXPOSE 8080/tcp
 
 
-CMD ["hypercorn", "director.web:app"]
+CMD ["hypercorn", "director.web:app", "-b", "0.0.0.0"]

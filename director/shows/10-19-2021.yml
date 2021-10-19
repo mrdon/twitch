@@ -1,0 +1,44 @@
+show:
+  me: 
+    name: Don Brown
+    title: Co-founder/CTO Sleuth
+  guests:
+    - name: Dylan Etkin
+      title: Co-founder/CEO Sleuth
+  scenes:
+    - label: Intro
+      obs_name: "Interview - me (minimal)"
+    - label: "Title"
+      obs_name: "Dev Matters - Intro"
+    - label: "2 People"
+      obs_name: "Interview - 2 guests"
+    - label: "Me"
+      obs_name: "Interview - me"
+    - label: "Me (BR)"
+      obs_name: "Interview - me (b-roll)"
+    - label: "Me (Browser)"
+      obs_name: "Interview - me (firefox)"
+    - label: "Commercial"
+      obs_name: "Dev Matters - Commercial"
+    - label: "Guest 1"
+      obs_name: "Interview - guest 1"
+    - label: "Guest 1 (BR)"
+      obs_name: "Interview - guest 1 (b-roll)"
+    - label: "Guest 1 (Browser)"
+      obs_name: "Interview - guest 1 (firefox)"
+  sections:
+    intro:
+      title: Tips to code faster
+      byline: ... and what tips to avoid
+    types:
+      title: 1. Learn to type
+      byline: "Yes, really."
+    sleuth-story:
+      title: The Sleuth story
+      byline: "Where did Dylan mess up? :)"
+    lessons-learned:
+      title: Lessons learned
+      byline: Tips for your side project
+    questions:
+      title: Open Questions
+      byline: Ok Twitch, what are your questions?

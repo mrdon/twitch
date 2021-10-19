@@ -4,7 +4,7 @@ import logging
 import os
 
 import aiohttp
-from aiohttp import ClientWebSocketResponse, WSMsgType
+from aiohttp import ClientWebSocketResponse, WSMsgType, ClientConnectionError
 from dotenv import load_dotenv
 
 from director import logo
@@ -24,8 +24,14 @@ class TauClient:
 
     async def connect(self):
         session = aiohttp.ClientSession()
-        ws = await session.ws_connect(
-            f'{self.tau_url}/ws/twitch-events/')
+        while True:
+            try:
+                ws = await session.ws_connect(
+                    f'{self.tau_url}/ws/twitch-events/')
+                break
+            except ClientConnectionError:
+                print("Waiting for tau to start...")
+                await asyncio.sleep(5)
 
         print("sending token")
         await ws.send_str(json.dumps(dict(token=self.tau_token)))
@@ -52,6 +58,7 @@ class TauClient:
                         color_str = data["event_data"]["user_input"].strip().casefold()
                         try:
                             color = Color[color_str]
+                            print(f'Turning {color_str}')
                             await logo.set_outer_color(color)
                         except ValueError:
                             print(f"Invalid color: {color_str}")

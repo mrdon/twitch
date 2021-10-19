@@ -12,8 +12,12 @@ services:
       - tau
     volumes:
       - ./director:/app/director:cached
+      - ./shows:/app/shows
+      - ./schedule:/app/schedule
     ports:
-      - "8800:8000"
+      - "8803:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   tau:
     image: tau-dev:latest
@@ -61,3 +65,4 @@ services:
 
 volumes:
   postgres-data:
+

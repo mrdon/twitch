@@ -29,7 +29,7 @@ from obswebsocket import obsws, requests  # noqa: E402
 class Connection:
 
     def __init__(self):
-        host = "localhost"
+        host = "host.docker.internal"
         port = 4444
         password = "sleuth"
 

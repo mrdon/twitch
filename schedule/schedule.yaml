@@ -4,10 +4,34 @@ schedule:
         notify_discord: -30m
 
     events:
-    - start: "2021-10-12T15:00"
-      title: "[Go/Python] Writing a terraform provider"
-      duration: 4h
+    - start: "2021-10-19T15:00"
+      title: "Tips to code faster (and which tips to avoid!)"
+      duration: 2h
       notify_discord: -60m
-    - start: "2021-10-14T15:00"
-      title: "[Python] Pull reviews, why they suck, automating Github"
+      sections:
+        - title: Tips to code faster
+          byline: ... and what tips to avoid!
+        - title: "Tip: Learn to type properly"
+          byline: "but speed doesn't matter"
+        - title: "Bad Tip: Expensive keyboards pay off"
+          byline: "Fun yes, but not faster"
+        - title: "Tip: Stay away from the mouse"
+          byline: Keyboard shortcuts ftw
+        - title: "Tip: Pair programming"
+          byline: Hard to do remotely, but possible
+        - title: "Tip: Find the flow and stay in it"
+          byline: "Avoid meetings and distractions"
+        - title: "Bad Tip: Avoid ALL meetings"
+          byline: "Coding the wrong thing fast is worse"
+        - title: "Tip: Use tech specs for big projects"
+          byline: "Again, make sure you are coding to the right problem"
+        - title: "Tip: Use Java (or something like it)"
+          byline: "Compilers and refactoring tools are huge"
+        - title: "Tip: Forget the code style wars"
+          byline: "Consistency and automation over squabbling and effort"
+        - title: "Tip: Get it right"
+          byline: "90% of time is spent on maintenance"
+
+    - start: "2021-10-21T15:00"
+      title: "[Go] Building a custom Terraform provider"
 

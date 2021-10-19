@@ -11,4 +11,6 @@ wled
 
 black
 reorder-python-imports
+evdev
+python-dateutil
 

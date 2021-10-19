@@ -4,7 +4,7 @@ from typing import Optional
 
 from wled import WLED
 
-LIGHT_IP = "10.76.5.152"
+LIGHT_IP = "192.168.1.35"
 
 
 class Preset(Enum):
@@ -28,6 +28,7 @@ class Color(Enum):
     purple = (110, 0, 110)
     yellow = (255, 200, 0)
     green = (166, 255, 150)
+    spacegray = (79, 91, 102)
 
     def __init__(self, red: int, green: int, blue: int):
         self.red = red
@@ -47,4 +48,5 @@ async def flash(preset: Preset, length: Optional[int] = 0):
 
 async def set_outer_color(color: Color):
     async with WLED(LIGHT_IP) as led:
+        print(f"Turning {color.value}")
         await led.segment(1, color_primary=color.value)
