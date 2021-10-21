@@ -4,7 +4,7 @@ from typing import Optional
 
 from wled import WLED
 
-LIGHT_IP = "192.168.1.35"
+LIGHT_IP = "wled-Sleuth.localdomain"
 
 
 class Preset(Enum):

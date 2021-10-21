@@ -33,5 +33,5 @@ schedule:
           byline: "90% of time is spent on maintenance"
 
     - start: "2021-10-21T15:00"
-      title: "[Go] Building a custom Terraform provider"
+      title: "[Python] Redis-based rate-limiting"
 
