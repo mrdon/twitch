@@ -6,8 +6,6 @@ schedule:
     events:
     - start: "2021-10-19T15:00"
       title: "Tips to code faster (and which tips to avoid!)"
-      duration: 2h
-      notify_discord: -60m
       sections:
         - title: Tips to code faster
           byline: ... and what tips to avoid!
@@ -34,4 +32,83 @@ schedule:
 
     - start: "2021-10-21T15:00"
       title: "[Python] Redis-based rate-limiting"
+    - start: "2021-10-28T15:00"
+      title: "What failure looks like: a real-world incident post-mortem and discussion"
+      sections:
+        - title: What failure looks like
+          byline: A real-world incident post-mortem
+        - title: The smoke before the fire 
+          byline: What are these new errors?
+        - title: The world is on fire 
+          byline: What is the customer impact?
+        - title: Fix 1 - Stop the bleeding 
+          byline: How do we get back to mostly working?
+        - title: Fix 2 - Resolve the incident
+          byline: How do we get back to normal?
+        - title: Fix 3 - Prevent this class of failure 
+          byline: How do we ensure this never happens again?
+        - title: Final thoughts
+          byline: Failure happens, so deal with it
+
+    - start: "2021-11-02T15:00"
+      duration: 1h
+      title: "Why you should fire your ops team"
+      sections: 
+        - title: Welcome!
+          byline: Let's get spicy
+        - title: What is an Ops team? 
+          byline: I miss the term 'SysOp'
+        - title: Ops hides your pains
+          byline: Pain is key to learning
+        - title: Ops handoffs are error-prone
+          byline: The more devs can take it end to end, the better
+        - title: Ops shows you down
+          byline: Research shows dev-driven, faster deployments rule
+        - title: Ops makes devs (the bad kind of) lazy
+          byline: Devs focus on closing tickets rather than delivering value
+        - title: Ops just sucks
+          byline: "Who wants to fight fires and clean up other people's messes?"
+        - title: "Solution: DevOps"
+          byline: Mix devs and operations together from both sides
+        - title: Ops -> Operational Platform
+          byline: Ops owns the operational platform. Devs own what's on top.
+        - title: Devs -> YBIYRUI
+          byline: You build it, you run it
+        - title: "Takeaway: Stop dumping on Ops"
+          byline: Automate, empower, and collaborate
+    - start: "2021-11-04T15:00"
+      title: "[Python/Go] Implement a custom Terraform provider"
+    - start: "2021-11-09T15:00"
+      title: "Secrets to a delightful(!) pull request process"
+      sections: 
+        - title: Secrets to a delighful(!) PR process
+          byline: Why does it take so much time?
+        - title: What are pull requests?
+          byline: Do we even need them?
+        - title: "1. Measure"
+          byline: You can't improve what you don't measure
+        - title: "2. Focus on the biggest bucket"
+          byline: Is it waiting, reviewing, or merging?
+        - title: "3. Only assign one person"
+          byline: Everyone's job means no ones job
+        - title: "4. Consider domain and tech expertise"
+          byline: One domain expert, one tech expert
+        - title: "5. Automate the small stuff"
+          byline: Stop the nitpicking comments on spacing!
+        - title: "6. Spec big things ahead of time"
+          byline: Reviews shouldn't be a surprise
+        - title: "7. Keep them small"
+          byline: "Think \"byte-sized\" #dadjoke"
+        - title: "8. Take it off line"
+          byline: Keep the heat out of the review
+        - title: "9. Automate deployment"
+          byline: Automation the end and work backwards
+        - title: "10. Automate merging"
+          byline: Ship when ready, not when you get around to it
+        - title: "Takeaway: PRs don't have to suck"
+          byline: A good PR process is the backbone of an elite team
+        - title: "Q&A: What PR tips have you picked up?"
+          byline: "Share in chat and use '$quote'"
+    - start: "2021-11-11T15:00"
+      title: "[Python] Discord, Twitch, and Gnome automation"
 

@@ -36,6 +36,7 @@ with open(f"../schedule/schedule.yaml", "r") as f:
         exit(0)
 
 sections = today_event.get("sections", [])
+print(f"Found for today: {sections}")
 
 
 def new_section(title, byline):
@@ -58,6 +59,23 @@ def run():
                     current_section_idx -= 1
                     if len(sections) < 0:
                         current_section_idx = len(sections) - 1
+                elif event.code == evdev.ecodes.KEY_F5:
+                    obs.call(requests.SetCurrentScene("Interview - me (zoom)"))
+                    continue
+                elif event.code == evdev.ecodes.KEY_ESC:
+                    obs.call(requests.SetCurrentScene("Interview - me"))
+                    continue
+                elif event.code == evdev.ecodes.KEY_DOT:
+                    scene = obs.call(requests.GetCurrentScene())
+                    if scene.getName() == "Interview - me (firefox)":
+                        obs.call(requests.SetCurrentScene("Interview - me"))
+                    else:
+                        print(f"scene: {scene.getName()}")
+                        obs.call(requests.SetCurrentScene("Interview - me (firefox)"))
+                    continue
+                else:
+                    print(f"Unknown key: {event.code}")
+                    continue
 
                 section = sections[current_section_idx]
                 new_section("", "")

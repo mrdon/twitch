@@ -83,7 +83,7 @@ def update_twitch_title(title: str):
     resp = requests.patch(f"https://api.twitch.tv/helix/channels?broadcaster_id=78371921", 
            headers={"authorization": f"Bearer {token}", "client-id": "5lhgwarlwdpq52732kvc5d076ddv97"},
            json= {"title": event.title})
-    print(f"resp: {resp.text}")
+    print(f"resp: {resp}")
    
 existing = get_twitch_events()
 events = get_scheduled_events()
@@ -92,16 +92,18 @@ now = pytz.timezone('America/Denver').localize(datetime.now())
 
 next_event = None
 for event in events:
+    print(f"Event: {event.start} - {event.title}")
     if event.start < now:
         print(f"{event.start} Ignoring an old event")
         continue
 
     if next_event is None or event.start < next_event.start:
+        print(f"event {event.start} is newer than {next_event.start if next_event else  None}")
         next_event = event
 
     for existing_event in existing:
         if existing_event.start == event.start:
-            if existing_event.title != event.title:
+            if existing_event.title != event.title or existing_event.duration != event.duration:
                 update_twitch_event(existing_event.id, event)
             else:
                 print(f"{event.start} is up to date")
@@ -109,6 +111,7 @@ for event in events:
     else:
         add_twitch_event(event)
 
+print(f"Updating title to {next_event.title}")
 update_twitch_title(next_event.title)
 
 #print(f"Existing: {existing}")
