@@ -24,6 +24,7 @@ else:
     exit(0)
 
 
+today_event = {}
 with open(f"../schedule/schedule.yaml", "r") as f:
     events = yaml.load(f, Loader=Loader)["schedule"]["events"]
     for event in events:
@@ -33,9 +34,9 @@ with open(f"../schedule/schedule.yaml", "r") as f:
             break
     else:
         print("No events found for today, skipping")
-        exit(0)
+        # exit(0)
 
-sections = today_event.get("sections", [])
+sections = today_event.get("sections", []) or []
 print(f"Found for today: {sections}")
 
 
@@ -50,6 +51,7 @@ def run():
     with device.grab_context():
         for event in device.read_loop():
             if event.type == evdev.ecodes.EV_KEY and event.value == 1:
+                print(f"type: {event.type} value: {event.value}")
                 if event.code == evdev.ecodes.KEY_PAGEDOWN:
                     current_section_idx += 1
                     if len(sections) == current_section_idx:
@@ -61,9 +63,11 @@ def run():
                         current_section_idx = len(sections) - 1
                 elif event.code == evdev.ecodes.KEY_F5:
                     obs.call(requests.SetCurrentScene("Interview - me (zoom)"))
+                    # obs.call(requests.SetCurrentScene("Coding - Green screen"))
                     continue
                 elif event.code == evdev.ecodes.KEY_ESC:
                     obs.call(requests.SetCurrentScene("Interview - me"))
+                    # obs.call(requests.SetCurrentScene("Coding - Full"))
                     continue
                 elif event.code == evdev.ecodes.KEY_DOT:
                     scene = obs.call(requests.GetCurrentScene())
@@ -77,11 +81,11 @@ def run():
                     print(f"Unknown key: {event.code}")
                     continue
 
+                # if current_section_idx in sections:
                 section = sections[current_section_idx]
                 new_section("", "")
                 obs.call(requests.SetCurrentScene("Interview - me (title)"))
                 new_section(section["title"], section["byline"])
-
 
 run()
 

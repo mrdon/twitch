@@ -13,4 +13,5 @@ black
 reorder-python-imports
 evdev
 python-dateutil
+psutil
 
