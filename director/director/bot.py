@@ -8,7 +8,6 @@ from twitchio.ext import commands
 
 from director import logo
 from director.logo import Preset
-from director.obs import DevMattersShow
 
 log = logging.getLogger(__name__)
 

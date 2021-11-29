@@ -1,23 +1,23 @@
 version: '3'
 
 services:
-  app:
-    build: .
-    restart: unless-stopped
-    env_file: .env
-    environment:
-      TAU_URL: http://tau:8085
-      TAU_TOKEN: ${TAU_TOKEN:-need_token}
-    depends_on:
-      - tau
-    volumes:
-      - ./director:/app/director:cached
-      - ./shows:/app/shows
-      - ./schedule:/app/schedule
-    ports:
-      - "8803:8000"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+#  app:
+#    build: .
+#    restart: unless-stopped
+#    env_file: .env
+#    environment:
+#      TAU_URL: http://tau:8085
+#      TAU_TOKEN: ${TAU_TOKEN:-need_token}
+#    depends_on:
+#      - tau
+#    volumes:
+#      - ./director:/app/director:cached
+#      - ./shows:/app/shows
+#      - ./schedule:/app/schedule
+#    ports:
+#      - "8803:8000"
+#    extra_hosts:
+#      - "host.docker.internal:host-gateway"
 
   tau:
     image: tau-dev:latest

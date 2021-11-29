@@ -3,23 +3,19 @@ import asyncio
 import json
 import logging
 import os
-from collections import defaultdict
-from typing import Dict
+import random
 from typing import List
 from typing import Optional
 
-import quart.flask_patch
-import yaml
 from quart import make_response
 from quart import Quart, current_app
 from quart import redirect
 from quart import render_template
 from quart import request
 from quart import url_for
-from quart.exceptions import NotFound
-from quart.exceptions import Unauthorized
 
-from director.obs import DevMattersShow, Section, Scene, Show, load_show
+from director import obs
+from director.schedule import get_next_event
 from director.tau import TauClient
 
 try:
@@ -33,6 +29,9 @@ app = Quart(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "not-so-secret")
 
 app.config["QUART_AUTH_COOKIE_SECURE"] = False
+app.config["env"] = "development"
+app.config["QUART_DEBUG"] = True
+app.config["DEBUG"] = True
 app.secret_key = os.environ.get("SECRET_KEY", "not-so-secret")
 
 logging.basicConfig()
@@ -57,20 +56,25 @@ async def start_bot():
     log.info("Starting bot")
     asyncio.create_task(bot.start())
 
-    show = DevMattersShow()
-    show.start()
-    current_app.obs = show
+    # show = DevMattersShow()
+    # show.start()
+    current_app.obs = obs.Connection()
+    #
+    # async def next_prev():
+    #     while True:
+    #         await broadcast_to_clients(random.choice(["next", "prev"]))
+    #         await asyncio.sleep(2)
+    #
+    # asyncio.create_task(next_prev())
 
 
-async def broadcast_to_clients(username: str, maybe_tags: List[str]):
+async def broadcast_to_clients(event: str):
     log.info(f"Broadcasting to {len(app.clients)} clients")
-    # user_tags = await tags.get_for_username(username)
-    # new_tags = [tag for tag in maybe_tags if tag not in user_tags]
-    # for client in app.clients:
-    #     log.info(f"Putting on client: {id(client)}")
-    #     client.put_nowait(
-    #         dict(author=dict(username=username, tags=user_tags), tags=new_tags)
-    #     )
+    for client in app.clients:
+        log.info(f"Putting on client: {id(client)}")
+        client.put_nowait(
+            dict(event=event)
+        )
 
 
 class ServerSentEvent:
@@ -106,13 +110,12 @@ app.clients = set()
 async def health():
     return "UP", 200
 
-
-@app.route("/show/<show_name>", methods=["GET"])
-async def get_show(show_name):
-    show = load_show(show_name)
+@app.route("/slides", methods=["GET"])
+async def get_slides():
+    event = get_next_event()
 
     return await render_template(
-        "index.html", sections=show.sections, scenes=show.scenes, show=show.name
+        f"slides/{event.slug}.html"
     )
 
 
@@ -130,22 +133,22 @@ async def lower_thirds():
     )
 
 
-@app.route("/button-click")
-async def clicked():
-    show_name = request.args.get('show')
-    scene_name = request.args.get('scene')
-    section_name = request.args.get('section')
-
-    show = load_show(show_name)
-
-    if scene_name:
-        current_app.obs.set_scene(scene_name)
-
-    if section_name:
-        section = show.sections[section_name]
-        current_app.obs.set_section(title=section.title, byline=section.byline, b_roll=section.b_roll)
-
-    return redirect(url_for('get_show', show_name=show.name))
+# @app.route("/button-click")
+# async def clicked():
+#     show_name = request.args.get('show')
+#     scene_name = request.args.get('scene')
+#     section_name = request.args.get('section')
+#
+#     show = load_show(show_name)
+#
+#     if scene_name:
+#         current_app.obs.set_scene(scene_name)
+#
+#     if section_name:
+#         section = show.sections[section_name]
+#         current_app.obs.set_section(title=section.title, byline=section.byline, b_roll=section.b_roll)
+#
+#     return redirect(url_for('get_show', show_name=show.name))
 
 
 @app.route("/sse")

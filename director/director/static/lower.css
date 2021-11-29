@@ -107,15 +107,15 @@ main {
   animation: 4s cubic-bezier(0.19, 0.76, 0.32, 1) 2 alternate both;
 }
 #animation-1 div:nth-child(2) {
-  top: 0;
-  left: 0.9em;
+  top: 0.1em;
+  left: 1.1em;
 }
 #animation-1 div:nth-child(2) div {
   animation-name: animation-1-text-1;
 }
 #animation-1 div:nth-child(3) {
-  top: 0.8em;
-  left: 0.5em;
+  top: 0.9em;
+  left: 0.8em;
 }
 #animation-1 div:nth-child(3) div {
   animation-name: animation-1-text-2;

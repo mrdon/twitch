@@ -19,4 +19,7 @@ format: ## Format the code
 
 
 run: ## Run the app locally
-	hypercorn director.web:app
+	docker-compose kill
+	docker-compose up -d
+	bin/set-from-env.sh
+	venv/bin/hypercorn --reload director.web:app

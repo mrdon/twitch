@@ -2,10 +2,13 @@ obs-websocket-py
 pytest
 twitchio
 
+
+python-slugify
 hypercorn
 quart
 python-dotenv
 pyyaml
+pytz
 
 wled
 

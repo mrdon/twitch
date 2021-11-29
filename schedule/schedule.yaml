@@ -169,7 +169,7 @@ schedule:
 
     - start: "2021-11-18T15:00"
       title: "[Python] Startup coding"
-    - start: "2021-11-23T15:00"
+    - start: "2021-12-23T15:00"
       title: "Continuous Deployment checklist"
       sections:
         - title: "What is Continuous Deployment?"
