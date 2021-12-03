@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Slides</title>
+  </head>
+  <body>
+    <main class="container-fluid" role="main">
+        <p>
+            Click to set the active slide deck
+        </p>
+        <ul>
+            {% for slug in slugs %}
+            <li><a href="/?slug={{ slug }}">{{ slug }}</a>
+                {% if slug == slide_slug %}
+                    [Active]
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/slides">Go to slides</a>
+    </main>
+  </body>
+</html>

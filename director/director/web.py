@@ -110,12 +110,29 @@ app.clients = set()
 async def health():
     return "UP", 200
 
+
+@app.route("/", methods=["GET"])
+async def get_slide_index():
+    slug = request.args.get("slug")
+    if slug:
+        app.slide_slug = slug
+
+    dir = os.path.join(os.path.dirname(__file__), "templates/slides")
+    return await render_template(
+        f"slides_index.html",
+        slugs=[t[:-5] for t in os.listdir(dir)],
+        slide_slug=getattr(app, "slide_slug")
+    )
+
+
 @app.route("/slides", methods=["GET"])
 async def get_slides():
-    event = get_next_event()
+    slug = getattr(app, "slide_slug")
+    if not slug:
+        slug = get_next_event().slug
 
     return await render_template(
-        f"slides/{event.slug}.html"
+        f"slides/{slug}.html"
     )
 
 

@@ -1,0 +1,198 @@
+{% extends "slides_master.html" %}
+{% block title %}How to PR like a Pro{% endblock %}
+{% block content %}
+
+    <section>
+        <h2>How to PR like a Pro</h2>
+        <small>Don Brown<br/>CTO/Co-founder, Sleuth</small>
+    </section>
+
+    <section>
+        <h2>Ground rules</h2>
+            <ol class="fragment">
+                <li>Ask questions at any time in chat</li>
+                <li>Share your own tips</li>
+                <li>Let's learn together</li>
+            </ol>
+    </section>
+
+    <section>
+        <h3>Is this you?</h3>
+    </section>
+
+    <section>
+        <p>
+            < video of I wanna go fast>
+        </p>
+    </section>
+
+    <section data-background-image="https://www.devops-research.com/images/resources-2021-sodr-cover_2x.png"
+    data-background-position="left">
+    </section>
+
+    <section>
+        <section>
+            <h3>Two types of teams</h3>
+            <ol>
+                <li class="fragment">Those that want to go faster</li>
+                <li class="fragment">Those that want stay fast</li>
+            </ol>
+        </section>
+        <section data-background-image="{{ url_for('static', filename='images') }}/raised-hands-1280.jpg">
+            <p style="color: black">How many of you feel your team is fast enough?</p>
+            <br />
+            <br />
+        </section>
+    </section>
+
+    <section>
+        <h3>Pull Requests are key</h3>
+        <p>
+            Sometimes, you need to slow down to go fast
+        </p>
+    </section>
+
+    <section data-background-image="{{ url_for('static', filename='images') }}/slow-snail.jpg">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>... but not too slow</h3>
+    </section>
+
+    <section>
+        <section>
+            <h2>Start here: Measure</h2>
+            <p>
+                You can't improve what you don't measure
+            </p>
+        </section>
+        <section>
+            <h3>Look at your full change lead time</h3>
+            <table class="fragment">
+                <thead>
+                    <tr>
+                        <th>Bucket</th>
+                        <th>Definition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr class="fragment">
+                    <td>
+                        Coding time
+                    </td>
+                    <td>
+                        First commit to PR created
+                    </td>
+                </tr>
+                <tr class="fragment">
+                    <td>
+                        Review lag time
+                    </td>
+                    <td>
+                        Waiting for the first review
+                    </td>
+                </tr>
+                <tr class="fragment">
+                    <td>
+                        Review time
+                    </td>
+                    <td>
+                        First review to merge
+                    </td>
+                </tr>
+                <tr class="fragment">
+                    <td>
+                        Deploy time
+                    </td>
+                    <td>
+                        Merge to deployed to production
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br />
+            <h3 class="fragment">Find the biggest bucket!</h3>
+        </section>
+    </section>
+
+    <section>
+        <h2>Fixing review lag time</h2>
+    </section>
+
+    <section>
+        <h2>Tip: only assign one person</h2>
+        <p>
+            Everyone's job means no ones job
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Consider domain and tech expertise</h2>
+        <p>
+            One domain expert, one tech expert
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Automate the small stuff</h2>
+        <p>
+            Stop the nitpicking comments on spacing!
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Spec big things ahead of time</h2>
+        <p>
+            Reviews shouldn't be a surprise
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Keep them small</h2>
+        <p>
+            Think "byte-sized" #dadjoke
+        </p>
+    </section>
+
+    <section>
+        <h2>8. Take it off line</h2>
+        <p>
+            Keep the heat out of the review
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Automate deployment</h2>
+        <p>
+            Automation the end and work backwards
+        </p>
+    </section>
+
+    <section>
+        <h2>10. Automate merging</h2>
+        <p>
+            Ship when ready, not when you get around to it
+        </p>
+    </section>
+
+    <section>
+        <h2>Takeaway: PRs don't have to suck</h2>
+        <p>
+            A good PR process is the backbone of an elite team
+        </p>
+    </section>
+
+    <section>
+        <h2>Q&A: What PR tips have you picked up?</h2>
+        <p>
+            Share in chat and use '$quote'
+        </p>
+    </section>
+
+{% endblock %}
+            
