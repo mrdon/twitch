@@ -7,6 +7,7 @@ import random
 from typing import List
 from typing import Optional
 
+from bs4 import BeautifulSoup, PageElement
 from quart import make_response
 from quart import Quart, current_app
 from quart import redirect
@@ -14,7 +15,8 @@ from quart import render_template
 from quart import request
 from quart import url_for
 
-from director import obs
+from director import obs, clicker
+from director.clicker import new_section, get_section_title
 from director.schedule import get_next_event
 from director.tau import TauClient
 
@@ -44,6 +46,7 @@ async def start_bot():
     tau_client = TauClient()
     await tau_client.connect()
 
+    print(f"joining: {os.environ['TWITCH_CHANNEL']}")
     bot = Bot(
         # set up the bot
         irc_token=os.environ["TWITCH_BOT_TMI"],
@@ -55,10 +58,13 @@ async def start_bot():
     print("running bot!!!")
     log.info("Starting bot")
     asyncio.create_task(bot.start())
+    current_app.bot = bot
 
     # show = DevMattersShow()
     # show.start()
     current_app.obs = obs.Connection()
+    asyncio.create_task(clicker.run())
+    print("started")
     #
     # async def next_prev():
     #     while True:
@@ -134,6 +140,29 @@ async def get_slides():
     return await render_template(
         f"slides/{slug}.html"
     )
+
+
+@app.route("/slide", methods=["POST"])
+async def post_current_slide():
+    event = get_next_event()
+    form = await request.form
+    if not form.get("html"):
+        print("No html?")
+        return "", 204
+
+    html = BeautifulSoup(form.get("html"), 'html.parser')
+    title: PageElement = html.find("h2") or html.find("h3")
+    current_section_title = get_section_title(current_app.obs)
+    if title and event:
+        for section in event.sections:
+            if section.title == title.text and current_section_title != section.title:
+                await new_section(current_app.obs, section.title, section.byline)
+                links = html.find_all("a")
+                link: PageElement
+                for link in links:
+                    await current_app.bot.send(f"{link.text} - {link['href']}")
+
+    return "ok", 204
 
 
 @app.route("/lower", methods=["GET"])

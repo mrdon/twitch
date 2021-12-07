@@ -9,6 +9,7 @@ quart
 python-dotenv
 pyyaml
 pytz
+beautifulsoup4
 
 wled
 

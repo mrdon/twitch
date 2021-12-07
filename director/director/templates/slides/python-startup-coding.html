@@ -1,0 +1,356 @@
+{% extends "slides_master.html" %}
+{% block title %}Continuous Deployment checklist{% endblock %}
+{% block content %}
+
+    <section>
+        <h2>Continuous Deployment checklist</h2>
+        <small>Don Brown<br/>CTO/Co-founder, Sleuth</small>
+    </section>
+
+    <section>
+        <section>
+            <h2>What is Continuous Deployment?</h2>
+            <img src="{{ url_for('static', filename='images') }}/sldc.png" alt="reveal.js logo"
+                 style="height: 300px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+            <p>
+                The missing piece in the SLDC
+            </p>
+        </section>
+        <section>
+            <h3>In code</h3>
+            <pre data-id="code-animation"><code data-line-numbers="|4-5|6-9|10-12" class="hljs language-yaml"
+                                                data-trim
+                                                data-line-numbers>
+workflows:
+  test-and-deploy:
+    jobs:
+      - run-tests
+      - build-image
+      - deploy-stage:
+          requires:
+            - run-tests
+            - build-image
+      - deploy-prod:
+          requires:
+            - deploy-stage
+        </code></pre>
+        </section>
+        <section>
+            <h3>Want more info?</h3>
+            <img src="https://img.youtube.com/vi/0nBIDMGVIQg/maxresdefault.jpg">
+            <small><a href="https://www.youtube.com/watch?v=0nBIDMGVIQg">https://www.youtube.com/watch?v=0nBIDMGVIQg</a></small>
+        </section>
+    </section>
+
+    <section>
+        <h2>Why a checklist?</h2>
+        <p>
+            Sadly, Continuous Deployment isn't for everyone
+        </p>
+    </section>
+
+    <section>
+        <h2>Let's group this</h2>
+        <ol>
+            <li class="fragment">Must have</li>
+            <li class="fragment">Nice to have</li>
+            <li class="fragment">Superstar level</li>
+        </ol>
+    </section>
+
+    <section data-background-image="{{ url_for('static', filename='images') }}/stop-sign.jpg">
+
+        <h2 style="text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;">Group 1 - Must haves</h2>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        {#    <p>#}
+        {#    Don't leave home without 'it'#}
+        {#    </p>#}
+    </section>
+
+    <section>
+        <section>
+            <h2><i class="fa-solid fa-square-check"></i> The right-sized team</h2>
+            <p>
+                The goldilocks zone
+            </p>
+        </section>
+        <section>
+            <h3>The formula</h3>
+            <small style="background-color: rgba(0, 0, 0, .5); padding: 10px">
+                <code class="fragment">(DEVS</code>
+                <code class="fragment">* DEPLOY_PER_DAY) * </code>
+                <code class="fragment"> (DEPLOY_TIME</code>
+                <code class="fragment"> + SOAK_TIME)</code>
+                <code class="fragment"> &gt;</code>
+                <code class="fragment">WORKING_HOURS</code>
+            </small>
+            <p class="fragment">For example...</p>
+            <small class="fragment" style="background-color: rgba(0, 0, 0, .5); padding: 10px">
+                <code class="fragment">(10</code>
+                <code class="fragment">* 1) * </code>
+                <code class="fragment"> (.25</code>
+                <code class="fragment"> + .25)</code>
+                <code class="fragment"> &gt;</code>
+                <code class="fragment">6</code>
+            </small>
+        </section>
+        <section>
+            <h3>Are big teams screwed?</h3>
+        </section>
+        <section>
+            <h3>Release Trains tl;dr;</h3>
+            <div class="twocolumn">
+                <div style="vertical-align: middle;">
+                    <p>
+                        Release at fixed intervals, usually several per day
+                    </p>
+                </div>
+                <div>
+                    <img src="{{ url_for('static', filename='images') }}/train-wreck.jpg">
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <h3>
+                Disadvantages:
+            </h3>
+            <ul>
+                <li class="fragment">Requires a release team</li>
+                <li class="fragment">Can get stuck</li>
+                <li class="fragment">Hard to debug</li>
+                <li class="fragment">Hard to keep devs in the loop</li>
+            </ul>
+        </section>
+    </section>
+
+    <section>
+        <section>
+            <h2><i class="fa-solid fa-square-check"></i> Automated, e2e testing</h2>
+            <p>
+                Think Selenium, Cypress, or Cucumber
+            </p>
+        </section>
+        <section>
+            <style>
+                .pyramid {
+                    shape-outside: polygon(310px 0px, 130px 405px, 558px 405px);
+                    padding-right: 60px;
+
+                }
+
+                .zone {
+                    padding: 40px 0;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: black;
+                    background-blend-mode: darken;
+                    transition: 0.5s;
+                }
+
+                .zone:nth-child(1) {
+                    background: #f9f871;
+                    width: 25%;
+                    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+                    -webkit-clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+
+                }
+
+                .zone:nth-child(2) {
+                    background: #90e17f;
+                    width: 50%;
+                    clip-path: polygon(25% 0%, 75% 0, 100% 100%, 0% 100%);
+                    -webkit-clip-path: polygon(25% 0%, 75% 0, 100% 100%, 0% 100%);
+                }
+
+                .zone:nth-child(3) {
+                    width: 75%;
+                    background: #00c096;
+                    clip-path: polygon(16.5% 0, 83% 0, 100% 100%, 0% 100%);
+                    -webkit-clip-path: polygon(16.5% 0, 83% 0, 100% 100%, 0% 100%);
+                }
+
+                .zone:nth-child(4) {
+                    width: 100%;
+                    background: #007398;
+                    clip-path: polygon(12.5% 0, 87.5% 0, 100% 100%, 0% 100%);
+                    -webkit-clip-path: polygon(12.5% 0, 87.5% 0, 100% 100%, 0% 100%);
+                }
+            </style>
+            <h3>Testing pyramid</h3>
+            <div class="pyramid">
+                <div class="zone fragment fade-down" data-fragment-index="4"><small style="vertical-align: bottom;
+">Smoke</small></div>
+                <div class="zone fragment fade-down" data-fragment-index="3">E2E</div>
+                <div class="zone fragment fade-down" data-fragment-index="2">Integration</div>
+                <div class="zone fragment fade-down" data-fragment-index="1">Unit</div>
+            </div>
+        </section>
+        <section>
+            <h3>In code</h3>
+            <pre data-id="code-animation"><code data-line-numbers="|2-4|6|7" class="hljs language-python"
+                                                data-trim
+                                                data-line-numbers>
+                    def test_slack_connect(self):
+                        LoginPage(self).login("sonny@sleuth.io", "sleuth")
+                        page = MyIdentitiesPage(self, goto=True)
+                        page.connect_to("slack").goto()
+
+                        slack_row_text = page.provider_row_text("slack")
+                        assert "You are connected as Sonny" in slack_row_text
+            </code></pre>
+        </section>
+        <section>
+            <h3>Want more info?</h3>
+            <img src="https://img.youtube.com/vi/e21hJnB9J5k/maxresdefault.jpg">
+            <small><a href="https://www.youtube.com/watch?v=e21hJnB9J5k">https://www.youtube.com/watch?v=e21hJnB9J5k</a></small>
+        </section>
+    </section>
+
+    <section>
+        <section data-background-image="{{ url_for('static', filename='images') }}/metrics-dive.jpg">
+
+            <h2 style="text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;"><i class="fa-solid fa-square-check"></i> Dev access to prod metrics</h2>
+            <br/>
+    {#        <h2><i class="fa-solid fa-square-check"></i> Dev access to prod metrics</h2>#}
+    {#        <p>#}
+    {#            Devs need to understand the impact of their change#}
+    {#        </p>#}
+        </section>
+        <section>
+            <h3>Why?</h3>
+            <p>Developers need to know the impact of their code</p>
+            <p class="fragment">Developers need to know the impact of their code</p>
+            <p class="fragment">Developers need to know the impact of their code</p>
+            <p class="fragment">Developers need to know the impact of their code</p>
+            <p class="fragment">Developers need to know the impact of their code</p>
+        </section>
+        <section>
+            <h3>What it means</h3>
+            <ul>
+                <li class="fragment">Access to metrics like resources (CPU, memory) and performance (request times)
+                </li>
+                <li class="fragment">Ability to define and graph new metrics</li>
+                <li class="fragment">Can create new alerts</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Remember this??</h3>
+            <img src="{{ url_for('static', filename='images') }}/sldc.png" alt="reveal.js logo"
+                 style="height: 300px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+            <p>
+                Feedback keeps the cycle healthy
+            </p>
+        </section>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Automated, dev-driven deployment</h2>
+        <p>
+            Um, ok, this is a gimme
+        </p>
+        <p class="fragment">... or is it?</p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Super fast rollbacks</h2>
+        <p>
+            Often different than normal deployments
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Feature flags</h2>
+        <p>
+            Separate code deployment and feature enabling
+        </p>
+    </section>
+
+    <section>
+        <h2>Group 2 - Nice to haves</h2>
+        <p>
+            You probably want these
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Devs on-call</h2>
+        <p>
+            At least business hours on-call
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Read-only access to prod data sources</h2>
+        <p>
+            Sometimes you just need to access the source
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Deployment tracking and metrics</h2>
+        <p>
+            What deploys when *cough* Sleuth *cough*
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Canary deployments</h2>
+        <p>
+            Minimize risk by rolling out in chunks
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Developers own the deployment pipeline</h2>
+        <p>
+            Close the loop
+        </p>
+    </section>
+
+    <section>
+        <h2>Group 3: Superstar features</h2>
+        <p>
+            CD in style, baby
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Automated rollbacks</h2>
+        <p>
+            Fully automate health tracking and response
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Geo-aware deployment pipelines</h2>
+        <p>
+            Update regions that are sleeping first
+        </p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-square-check"></i> Automated, conditional pipelines</h2>
+        <p>
+            Automatically adjust flow based on the type of change
+        </p>
+    </section>
+
+    <section>
+        <h2>What did I miss?</h2>
+        <p>
+            What would you recommend for a new team trying CD?
+        </p>
+    </section>
+
+{% endblock %}
+            

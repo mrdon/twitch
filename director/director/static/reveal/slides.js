@@ -64,4 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
     setupEventSource();
+
+    Reveal.on( 'slidechanged', event => {
+        navigator.sendBeacon("/slide", new URLSearchParams({html: event.currentSlide.innerHTML}));
+        console.log("cur: " + event.currentSlide.innerHTML);
+  // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+} );
 });

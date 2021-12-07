@@ -2,6 +2,7 @@ import logging
 from functools import wraps
 from string import digits
 
+from obswebsocket import requests
 from quart import current_app
 from twitchio import Context
 from twitchio.ext import commands
@@ -26,6 +27,7 @@ def require_mod(func):
 class Bot(commands.Bot):
 
     def __init__(self, *args, **kwargs):
+        self.channel = kwargs.get("initial_channels")[0]
         super().__init__(*args, **kwargs)
 
     async def event_ready(self):
@@ -39,7 +41,7 @@ class Bot(commands.Bot):
         arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
         message = sized_truncate(arg_line, 35)
         if message:
-            current_app.obs.set_section(byline=f'"{message}"')
+            current_app.obs.call(requests.SetTextFreetype2Properties("Interview bottom title line 2", text=f'"{message}"'))
         # await ctx.send(f'{ctx.author.is_mod} - {arg_line}!')
 
     @commands.command(name='flash')
@@ -49,6 +51,9 @@ class Bot(commands.Bot):
     @commands.command(name='reset')
     async def reset(self, ctx: Context):
         await logo.flash(Preset.DEFAULT)
+
+    async def send(self, message):
+        await self.get_channel(self.channel[1:]).send(message)
 
 
 def sized_truncate(content, length, suffix='...'):

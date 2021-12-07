@@ -22,4 +22,8 @@ run: ## Run the app locally
 	docker-compose kill
 	docker-compose up -d
 	bin/set-from-env.sh
-	venv/bin/hypercorn --reload director.web:app
+	venv/bin/hypercorn --reload -b localhost:8090 director.web:app
+
+
+gen-slides: ## Generate slides
+	venv/bin/python bin/schedule-to-slides.py

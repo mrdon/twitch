@@ -29,9 +29,10 @@ from obswebsocket import obsws, requests  # noqa: E402
 class Connection:
 
     def __init__(self):
-        host = "host.docker.internal"
+        host = "localhost"
         port = 4444
         password = "sleuth"
+        self.started = False
 
         self.ws = obsws(host, port, password)
 
@@ -40,6 +41,10 @@ class Connection:
         return self.ws.call(request)
 
     def _ensure_connected(self):
+        if self.started:
+            return
+
         self.ws.connect()
+        self.started = True
 
 

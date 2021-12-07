@@ -49,7 +49,7 @@ def run():
     current_section_idx = 0
 
     with device.grab_context():
-        for event in device.read_loop():
+        async for event in device.async_read_loop():
             if event.type == evdev.ecodes.EV_KEY and event.value == 1:
                 print(f"type: {event.type} value: {event.value}")
                 if event.code == evdev.ecodes.KEY_PAGEDOWN:
@@ -62,7 +62,7 @@ def run():
                     if len(sections) < 0:
                         current_section_idx = len(sections) - 1
                 elif event.code == evdev.ecodes.KEY_F5:
-                    obs.call(requests.SetCurrentScene("Interview - me (zoom)"))
+                    obs.call(requests.SetCurrentScene("Interview - me (pycharm)"))
                     # obs.call(requests.SetCurrentScene("Coding - Green screen"))
                     continue
                 elif event.code == evdev.ecodes.KEY_ESC:

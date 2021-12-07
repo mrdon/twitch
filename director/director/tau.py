@@ -29,8 +29,8 @@ class TauClient:
                 ws = await session.ws_connect(
                     f'{self.tau_url}/ws/twitch-events/')
                 break
-            except ClientConnectionError:
-                print("Waiting for tau to start...")
+            except ClientConnectionError as e:
+                print(f"Waiting for tau to start... : {e}")
                 await asyncio.sleep(5)
 
         print("sending token")
