@@ -133,7 +133,7 @@ async def get_slide_index():
 
 @app.route("/slides", methods=["GET"])
 async def get_slides():
-    slug = getattr(app, "slide_slug")
+    slug = getattr(app, "slide_slug", None)
     if not slug:
         slug = get_next_event().slug
 

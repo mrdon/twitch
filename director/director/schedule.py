@@ -21,6 +21,10 @@ class Event:
     def slug(self):
         return slugify(self.title)
 
+    @property
+    def end(self):
+        return self.start + self.duration
+
 
 @dataclass
 class Section:
@@ -55,12 +59,12 @@ def get_scheduled_events() -> List[Event]:
 
 def get_next_event() -> Optional[Event]:
     now = pytz.timezone('America/Denver').localize(datetime.now())
-    next_event = None
+    next_event: Optional[Event] = None
     for event in get_scheduled_events():
-        if event.start < now:
+        if event.end < now:
             continue
 
-        if next_event is None or next_event.start > event.start:
+        if next_event is None or next_event.end > event.end:
             next_event = event
 
     return next_event
