@@ -72,7 +72,7 @@
             </p>
         </section>
         <section>
-            <h3>Look at your full change lead time</h3>
+            <h3>Look at change lead time</h3>
             <table class="fragment">
                 <thead>
                     <tr>
@@ -121,14 +121,47 @@
     </section>
 
     <section>
-        <h2>Fixing review lag time</h2>
-    </section>
+        <section>
+            <h2>Tip: only assign one person</h2>
+            <p>
+                Everyone's job means no ones job
+            </p>
+        </section>
+        <section  data-background-image="{{ url_for('static', filename='images') }}/man-dispair.jpg">
+            <h3>Don't burnout your best devs!</h3>
+        </section>
+        <section>
+            <h3>Use a PR/MR policy</h3>
+            <p class="fragment">Define up front:</p>
+            <ul>
+                <li class="fragment">asdf</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Automate, automate, automate</h3>
+            <pre data-id="code-animation"><code data-line-numbers="|1|3|5|7|9|" class="hljs"
+                                                data-trim
+                                                data-line-numbers>
+*       @global-owner1 @global-owner2
 
-    <section>
-        <h2>Tip: only assign one person</h2>
-        <p>
-            Everyone's job means no ones job
-        </p>
+*.js    @js-owner
+
+*.txt @octo-org/octocats
+
+/build/logs/ @doctocat
+
+/apps/github
+            </code>
+            </pre>
+            <p class="fragment">
+                Github, Gitlab, Bitbucket (server)...
+            </p>
+            <p class="fragment">
+                ... no Bitbucket cloud <img style="vertical-align: middle" src="{{ url_for('static', filename='images')
+                    }}/sad-panda.jpeg"
+                                            height="100">
+            </p>
+        </section>
     </section>
 
     <section>

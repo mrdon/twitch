@@ -120,8 +120,7 @@ async def health():
 @app.route("/", methods=["GET"])
 async def get_slide_index():
     slug = request.args.get("slug")
-    if slug:
-        app.slide_slug = slug
+    app.slide_slug = slug
 
     dir = os.path.join(os.path.dirname(__file__), "templates/slides")
     return await render_template(
