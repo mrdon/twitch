@@ -8,22 +8,10 @@
     </section>
 
     <section>
-        <h2>Ground rules</h2>
-            <ol class="fragment">
-                <li>Ask questions at any time in chat</li>
-                <li>Share your own tips</li>
-                <li>Let's learn together</li>
-            </ol>
-    </section>
-
-    <section>
         <h3>Is this you?</h3>
     </section>
 
-    <section>
-        <p>
-            < video of I wanna go fast>
-        </p>
+    <section data-background-video="{{ url_for('static', filename='videos') }}/go-fast-clip-1.mp4">
     </section>
 
     <section data-background-image="https://www.devops-research.com/images/resources-2021-sodr-cover_2x.png"
@@ -62,6 +50,15 @@
         <br />
         <br />
         <h3>... but not too slow</h3>
+    </section>
+
+    <section>
+        <h2>Ground rules</h2>
+            <ol class="fragment">
+                <li>Ask questions at any time in chat</li>
+                <li>Share your own tips</li>
+                <li>Let's learn together</li>
+            </ol>
     </section>
 
     <section>
@@ -121,21 +118,29 @@
     </section>
 
     <section>
+        <h3>Biggest bucket</h3>
+        <ol>
+            <li class="fragment">The whole lead time</li>
+            <li class="fragment">The PR itself</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>What does that look like?</h3>
+    </section>
+
+    <section>
         <section>
-            <h2>Tip: only assign one person</h2>
-            <p>
-                Everyone's job means no ones job
-            </p>
+            <h2>Next: Fix PR lag time</h2>
         </section>
         <section  data-background-image="{{ url_for('static', filename='images') }}/man-dispair.jpg">
             <h3>Don't burnout your best devs!</h3>
         </section>
         <section>
-            <h3>Use a PR/MR policy</h3>
-            <p class="fragment">Define up front:</p>
-            <ul>
-                <li class="fragment">asdf</li>
-            </ul>
+            <h3>Assign one reviewer</h3>
+            <p>
+                Everyone's job means no ones job
+            </p>
         </section>
         <section>
             <h3>Automate, automate, automate</h3>
@@ -165,52 +170,34 @@
     </section>
 
     <section>
-        <h2>4. Consider domain and tech expertise</h2>
-        <p>
-            One domain expert, one tech expert
-        </p>
-    </section>
-
-    <section>
-        <h2>5. Automate the small stuff</h2>
-        <p>
-            Stop the nitpicking comments on spacing!
-        </p>
-    </section>
-
-    <section>
-        <h2>6. Spec big things ahead of time</h2>
-        <p>
-            Reviews shouldn't be a surprise
-        </p>
-    </section>
-
-    <section>
-        <h2>7. Keep them small</h2>
-        <p>
-            Think "byte-sized" #dadjoke
-        </p>
-    </section>
-
-    <section>
-        <h2>8. Take it off line</h2>
-        <p>
-            Keep the heat out of the review
-        </p>
-    </section>
-
-    <section>
-        <h2>9. Automate deployment</h2>
-        <p>
-            Automation the end and work backwards
-        </p>
-    </section>
-
-    <section>
-        <h2>10. Automate merging</h2>
-        <p>
-            Ship when ready, not when you get around to it
-        </p>
+        <section>
+            <h2>Finally: Keep them small and focused</h2>
+            <p>
+                Small and fast, easy and quick
+            </p>
+        </section>
+        <section>
+            <h3>Use a PR/MR policy</h3>
+            <p class="fragment">Define up front:</p>
+            <ul>
+                <li class="fragment">How to assign reviewers</li>
+                <li class="fragment">Types of valid feedback</li>
+                <li class="fragment">How to respond to feedback</li>
+                <li class="fragment">When and who to merge</li>
+            </ul>
+        </section>
+        <section>
+            <img src="{{ url_for('static', filename='images') }}/sleuth-pr-policy.png">
+        </section>
+        <section>
+            <h3>Tackle large PRs at their source</h3>
+            <p>
+                Split up tasks correctly and encourage tech specs for large ones
+            </p>
+        </section>
+        <section>
+            <img src="{{ url_for('static', filename='images') }}/tech-spec.png">
+        </section>
     </section>
 
     <section>
@@ -223,7 +210,7 @@
     <section>
         <h2>Q&A: What PR tips have you picked up?</h2>
         <p>
-            Share in chat and use '$quote'
+            Share in chat!
         </p>
     </section>
 

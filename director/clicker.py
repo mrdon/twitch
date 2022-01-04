@@ -41,8 +41,8 @@ print(f"Found for today: {sections}")
 
 
 def new_section(title, byline):
-    obs.call(requests.SetTextFreetype2Properties("Interview bottom title", text=title))
-    obs.call(requests.SetTextFreetype2Properties("Interview bottom title line 2", text=byline))
+    obs.call(requests.SetTextFreetype2Properties("Section title", text=title))
+    obs.call(requests.SetTextFreetype2Properties("Section byline", text=byline))
 
 
 def run():

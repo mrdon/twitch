@@ -8,7 +8,7 @@ from twitchio import Context
 from twitchio.ext import commands
 
 from director import logo
-from director.logo import Preset
+from director.logo import Preset, Color
 
 log = logging.getLogger(__name__)
 
@@ -41,12 +41,20 @@ class Bot(commands.Bot):
         arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
         message = sized_truncate(arg_line, 35)
         if message:
-            current_app.obs.call(requests.SetTextFreetype2Properties("Interview bottom title line 2", text=f'"{message}"'))
+            current_app.obs.call(requests.SetTextFreetype2Properties("Section byline", text=f'"{message}"'))
         # await ctx.send(f'{ctx.author.is_mod} - {arg_line}!')
 
     @commands.command(name='flash')
     async def flash(self, ctx: Context):
         await logo.flash(Preset.FLASH)
+
+    @commands.command(name='color')
+    async def color(self, ctx: Context):
+        arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
+        try:
+            await logo.set_outer_color(Color[arg_line])
+        except ValueError:
+            pass
 
     @commands.command(name='reset')
     async def reset(self, ctx: Context):

@@ -9,6 +9,7 @@ from typing import Optional, List, Dict
 
 import yaml
 from obswebsocket.base_classes import Baserequests
+from obswebsocket.exceptions import ConnectionFailure
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -36,15 +37,23 @@ class Connection:
 
         self.ws = obsws(host, port, password)
 
-    def call(self, request: Baserequests) -> Baserequests:
+    def call(self, request: Baserequests) -> Optional[Baserequests]:
         self._ensure_connected()
-        return self.ws.call(request)
+        if self.started:
+            return self.ws.call(request)
+        else:
+            print(f"OBS not connected, skipping call {request}")
+            return None
 
     def _ensure_connected(self):
         if self.started:
             return
 
-        self.ws.connect()
+        try:
+            self.ws.connect()
+        except ConnectionFailure:
+            print("ERROR: Connection refused for obs")
+            return
         self.started = True
 
 

@@ -29,16 +29,18 @@ def find_device(name):
     return device
 
 
-def get_section_title(obs) -> str:
-    element = obs.call(requests.GetTextFreetype2Properties("Interview bottom title"))
-    return element.getText()
+def get_section_title(obs: Connection) -> str:
+    element = obs.call(requests.GetTextFreetype2Properties("Section title"))
+    return element.getText() if element else None
 
 
 async def new_section(obs, title, byline):
-    obs.call(requests.SetSceneItemRender("[Scene] Interview - lower third", False))
-    obs.call(requests.SetTextFreetype2Properties("Interview bottom title", text=title))
-    obs.call(requests.SetTextFreetype2Properties("Interview bottom title line 2", text=byline))
-    obs.call(requests.SetSceneItemRender("[Scene] Interview - lower third", True))
+    obs.call(requests.SetSceneItemRender("Section title", False))
+    obs.call(requests.SetSceneItemRender("Section byline", False))
+    obs.call(requests.SetTextFreetype2Properties("Section title", text=title))
+    obs.call(requests.SetTextFreetype2Properties("Section byline", text=byline))
+    obs.call(requests.SetSceneItemRender("Section title", True))
+    obs.call(requests.SetSceneItemRender("Section byline", True))
 
 
 async def _process_event(obs: Connection, code):
@@ -53,28 +55,19 @@ async def _process_event(obs: Connection, code):
         await broadcast_to_clients("prev")
 
     elif code == ecodes.KEY_POWER:
-        obs.call(requests.SetCurrentScene("Coding - Green screen"))
+        obs.call(requests.SetCurrentScene("Slides - Green screen"))
     elif code == ecodes.KEY_PLAYPAUSE:
-        obs.call(requests.SetCurrentScene("Coding - Green screen (zoom)"))
+        obs.call(requests.SetCurrentScene("Slides - Green screen (zoom)"))
     elif code == ecodes.KEY_COMPOSE:
-        obs.call(requests.SetCurrentScene("Coding - Green screen (raw)"))
+        obs.call(requests.SetCurrentScene("Slides - Firefox"))
     elif code == ecodes.KEY_BACK:
-        obs.call(requests.SetCurrentScene("Interview - me"))
-
-    # elif code == ecodes.KEY_F5:
-    #     obs.call(requests.SetCurrentScene("Interview - me (zoom)"))
-    #     continue
-    # elif code == ecodes.KEY_ESC:
-    #     obs.call(requests.SetCurrentScene("Interview - me"))
-    #     continue
-    # elif code == ecodes.KEY_DOT:
-    #     scene = obs.call(requests.GetCurrentScene())
-    #     if scene.getName() == "Interview - me (firefox)":
-    #         obs.call(requests.SetCurrentScene("Interview - me"))
-    #     else:
-    #         print(f"scene: {scene.getName()}")
-    #         obs.call(requests.SetCurrentScene("Interview - me (firefox)"))
-    #     continue
+        obs.call(requests.SetCurrentScene("Coding - Webcam"))
+    elif code == ecodes.KEY_UP:
+        obs.call(requests.SetSceneItemRender("Window chat", True))
+    elif code == ecodes.KEY_DOWN:
+        obs.call(requests.SetSceneItemRender("Window chat", False))
+    elif code == ecodes.KEY_VOLUMEUP:
+        obs.call(requests.SetCurrentScene("Slides - Video"))
     else:
         print(f"Unknown key: {code}")
 
@@ -88,7 +81,7 @@ async def run():
     obs = current_app.obs
     event = get_next_event()
     if event:
-        await new_section(obs, event.title, "!quote to change this")
+        await new_section(obs, event.title, "$quote to change this")
 
     device = find_device("FC,LTD Mic Device Keyboard")
     with device.grab_context():

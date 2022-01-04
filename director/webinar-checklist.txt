@@ -1,0 +1,14 @@
+Before doing a webinar:
+
+# Start Tau
+# Start director
+# Visit slides and set to correct deck
+# Test and tweak boom mic lag
+# Set up window chat source to point at zoom chat
+# Set up gopro position
+# Move right monitor up
+# Move obs to right monitor
+
+todo:
+- test with zoom and mic
+- Fix video
