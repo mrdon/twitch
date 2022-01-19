@@ -9,7 +9,7 @@ from dateutil import parser
 
 token = os.environ.get("TWITCH_API_TOKEN")
 
-
+print(f"token {token}")
 @dataclass
 class Event:
     start: datetime

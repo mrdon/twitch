@@ -1,6 +1,6 @@
 import asyncio
 from enum import Enum
-from typing import Optional
+from typing import Optional, Tuple, Union
 
 from wled import WLED
 
@@ -46,7 +46,11 @@ async def flash(preset: Preset, length: Optional[int] = 0):
         await led.preset(Preset.DEFAULT.index)
 
 
-async def set_outer_color(color: Color):
+async def set_outer_color(color: Union[Color, Tuple[int, int, int]]):
     async with WLED(LIGHT_IP) as led:
-        print(f"Turning {color.value}")
-        await led.segment(1, color_primary=color.value)
+        if isinstance(color, Color):
+            rgb = color.value
+        else:
+            rgb = color
+        print(f"Turning {rgb}")
+        await led.segment(1, color_primary=rgb)

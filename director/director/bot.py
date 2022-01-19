@@ -52,6 +52,7 @@ class Bot(commands.Bot):
     async def color(self, ctx: Context):
         arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
         try:
+            # todo: parse hex as well
             await logo.set_outer_color(Color[arg_line])
         except ValueError:
             pass

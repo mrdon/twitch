@@ -302,5 +302,35 @@ schedule:
           byline: "Uh, this one is complicated"
     - start: "2021-12-23T15:00"
       title: "[Python] Startup coding"
+    - start: "2022-01-04T15:00"
+      title: "Ask a (software) architect"
+      sections:
+        - title: "Ask a (software) architect"
+          byline: Bring it!
+    - start: "2022-01-06T15:00"
+      title: "[Python] Startup coding"
+    - start: "2022-01-18T15:00"
+      title: "Ask a (software) architect"
+      sections:
+        - title: "Ask a (software) architect"
+          byline: Do you want to avoid being a manager?
+    - start: "2022-01-20T15:00"
+      title: "[Python] Stream deck hacking for great justice"
+    - start: "2022-01-25T15:00"
+      title: "Ask a (software) architect"
+      sections:
+        - title: "Ask a (software) architect"
+          byline: Ivory tower much?
+    - start: "2022-01-27T15:00"
+      title: "[Python] Startup coding"
+    - start: "2022-02-01T15:00"
+      title: "Ask a (software) architect"
+      sections:
+        - title: "Ask a (software) architect"
+          byline: Principal dev vs architect
+    - start: "2022-02-03T15:00"
+      title: "[Python] Startup coding"
+
+
 
 
