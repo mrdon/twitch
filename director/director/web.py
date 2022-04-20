@@ -36,13 +36,14 @@ app.config["QUART_DEBUG"] = True
 app.config["DEBUG"] = True
 app.secret_key = os.environ.get("SECRET_KEY", "not-so-secret")
 
-logging.basicConfig()
+# logging.basicConfig()
 log = logging.getLogger(__name__)
 
 
 @app.before_serving
 async def start_bot():
     from director.bot import Bot
+    print(f"about to connect to {os.environ['TWITCH_CHANNEL']}")
     tau_client = TauClient()
     await tau_client.connect()
 

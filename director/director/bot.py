@@ -31,7 +31,6 @@ class Bot(commands.Bot):
         super().__init__(*args, **kwargs)
 
     async def event_ready(self):
-        print("ready")
         log.info(f"Ready | {self.nick}")
 
     # Commands use a different decorator
@@ -51,9 +50,18 @@ class Bot(commands.Bot):
     @commands.command(name='color')
     async def color(self, ctx: Context):
         arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
+        log.info(f"color called with {arg_line}")
         try:
-            # todo: parse hex as well
-            await logo.set_outer_color(Color[arg_line])
+            if arg_line and arg_line.startswith("#") and len(arg_line) == 7:
+                color = (
+                    int(arg_line[1:3], 16),
+                    int(arg_line[3:5], 16),
+                    int(arg_line[5:], 16)
+                )
+            else:
+                color = Color[arg_line]
+
+            await logo.set_outer_color(color)
         except ValueError:
             pass
 

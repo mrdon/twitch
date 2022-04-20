@@ -49,12 +49,14 @@ class TauClient:
             if not msg:
                 continue
 
-            print(f"got msg: {msg.type}")
+            log.info(f"got msg: {msg.type}")
             if msg.type == WSMsgType.TEXT:
                 data = msg.json()
                 event_type = data["event_type"]
-                if event_type == "point-redemption":
-                    if data["event_data"]["reward"]["id"] == "6393c69c-8b3f-4364-ae45-065383e04a44":
+                log.info(f"Got event: {event_type}")
+                if event_type == "channel-channel_points_custom_reward_redemption-add":
+                    redemption_id = data["event_data"]["reward"]["id"]
+                    if redemption_id == "6393c69c-8b3f-4364-ae45-065383e04a44":
                         color_str = data["event_data"]["user_input"].strip().casefold()
                         try:
                             color = Color[color_str]
@@ -62,9 +64,11 @@ class TauClient:
                             await logo.set_outer_color(color)
                         except ValueError:
                             print(f"Invalid color: {color_str}")
-                elif event_type == "follow":
+                    else:
+                        log.warning(f"Unknown redemption: {redemption_id}")
+                elif event_type == "channel-follow":
                     await logo.flash(Preset.FOLLOW)
-                elif event_type == "subscribe":
+                elif event_type == "channel-subscribe":
                     plan = data["event_data"]["data"]["message"]["sub_plan"]
                     if plan == "3000":
                         length = 30
@@ -77,9 +81,9 @@ class TauClient:
                         length = 5
 
                     await logo.flash(Preset.SUBSCRIBE, length=length)
-                elif event_type == "raid":
+                elif event_type == "channel-raid":
                     await logo.flash(Preset.RAID)
-                elif event_type == "cheer":
+                elif event_type == "channel-cheer":
                     bits = int(data["event_data"]["bits"])
                     seconds = int(bits/100) * 5
                     await logo.flash(Preset.CHEER, length=seconds)

@@ -24,6 +24,11 @@ run: ## Run the app locally
 	bin/set-from-env.sh
 	venv/bin/hypercorn --reload -b localhost:8090 director.web:app
 
+restart: ## Restart from systemd
+	sudo systemctl kill sleuth-director.service
+	sleep 10
+	sudo systemctl start sleuth-director.service
+	sudo systemctl status sleuth-director.service
 
 gen-slides: ## Generate slides
 	venv/bin/python bin/schedule-to-slides.py

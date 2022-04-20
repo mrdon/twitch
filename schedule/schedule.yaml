@@ -317,10 +317,10 @@ schedule:
     - start: "2022-01-20T15:00"
       title: "[Python] Stream deck hacking for great justice"
     - start: "2022-01-25T15:00"
-      title: "Ask a (software) architect"
+      title: "Ask a (software) architect - Do microservices suck?"
       sections:
         - title: "Ask a (software) architect"
-          byline: Ivory tower much?
+          byline: Do microservices suck?
     - start: "2022-01-27T15:00"
       title: "[Python] Startup coding"
     - start: "2022-02-01T15:00"
@@ -329,6 +329,16 @@ schedule:
         - title: "Ask a (software) architect"
           byline: Principal dev vs architect
     - start: "2022-02-03T15:00"
+      title: "[Python] Startup coding"
+    - start: "2022-02-08T15:00"
+      title: "Ask a (software) architect"
+      sections:
+        - title: "Ask a (software) architect"
+          byline: Get a promotion with this one weird trick
+    - start: "2022-02-22T15:00"
+      title: "Let's answer tech interview questions"
+      duration: 1h
+    - start: "2022-02-24T15:00"
       title: "[Python] Startup coding"
 
 
