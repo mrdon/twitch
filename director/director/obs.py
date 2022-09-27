@@ -6,10 +6,9 @@ import logging
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional, List, Dict
+from obsws_python.baseclient import ObsClient
 
 import yaml
-from obswebsocket.base_classes import Baserequests
-from obswebsocket.exceptions import ConnectionFailure
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -24,8 +23,6 @@ FFMPEG_SOURCE = "ffmpeg_source"
 
 logging.basicConfig(level=logging.INFO)
 
-from obswebsocket import obsws, requests  # noqa: E402
-
 
 class Connection:
 
@@ -35,14 +32,14 @@ class Connection:
         password = "sleuth"
         self.started = False
 
-        self.ws = obsws(host, port, password)
+        self.ws = ObsClient(host=host, port=port, password=password)
 
-    def call(self, request: Baserequests) -> Optional[Baserequests]:
+    def call(self, param: str, data: Optional[dict] = None):
         self._ensure_connected()
         if self.started:
-            return self.ws.call(request)
+            return self.ws.req(param, data)
         else:
-            print(f"OBS not connected, skipping call {request}")
+            print(f"OBS not connected, skipping call {param}")
             return None
 
     def _ensure_connected(self):
@@ -50,8 +47,8 @@ class Connection:
             return
 
         try:
-            self.ws.connect()
-        except ConnectionFailure:
+            self.ws.authenticate()
+        except Exception:
             print("ERROR: Connection refused for obs")
             return
         self.started = True

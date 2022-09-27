@@ -1,4 +1,5 @@
-obs-websocket-py
+#obs-websocket-py
+obsws-python
 pytest
 twitchio
 

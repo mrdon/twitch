@@ -2,10 +2,9 @@ import logging
 from functools import wraps
 from string import digits
 
-from obswebsocket import requests
 from quart import current_app
-from twitchio import Context
 from twitchio.ext import commands
+from twitchio.ext.commands import Context
 
 from director import logo
 from director.logo import Preset, Color
@@ -37,10 +36,12 @@ class Bot(commands.Bot):
     @commands.command(name='quote')
     # @require_mod
     async def my_command(self, ctx: Context):
-        arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
+        arg_line = ctx.message.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
         message = sized_truncate(arg_line, 35)
         if message:
-            current_app.obs.call(requests.SetTextFreetype2Properties("Section byline", text=f'"{message}"'))
+            current_app.obs.call("SetInputSettings", {"inputName": "Section byline",
+                                           "inputSettings": {"text": f'"{message}"'},
+                                           "overlay": True})
         # await ctx.send(f'{ctx.author.is_mod} - {arg_line}!')
 
     @commands.command(name='flash')
@@ -49,7 +50,7 @@ class Bot(commands.Bot):
 
     @commands.command(name='color')
     async def color(self, ctx: Context):
-        arg_line = ctx.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
+        arg_line = ctx.message.content[(len(ctx.prefix) + len(ctx.command.name)):].strip()
         log.info(f"color called with {arg_line}")
         try:
             if arg_line and arg_line.startswith("#") and len(arg_line) == 7:

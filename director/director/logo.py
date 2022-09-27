@@ -4,7 +4,7 @@ from typing import Optional, Tuple, Union
 
 from wled import WLED
 
-LIGHT_IP = "192.168.0.214"
+LIGHT_IP = "192.168.0.138"
 
 
 class Preset(Enum):

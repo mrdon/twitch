@@ -15,8 +15,8 @@ from quart import render_template
 from quart import request
 from quart import url_for
 
-from director import obs, clicker
-from director.clicker import new_section, get_section_title
+from director import obs #, clicker
+# from director.clicker import new_section, get_section_title
 from director.schedule import get_next_event
 from director.tau import TauClient
 
@@ -50,7 +50,7 @@ async def start_bot():
     print(f"joining: {os.environ['TWITCH_CHANNEL']}")
     bot = Bot(
         # set up the bot
-        irc_token=os.environ["TWITCH_BOT_TMI"],
+        token=os.environ["TWITCH_BOT_TMI"],
         client_id="", #os.environ["CLIENT_ID"],
         nick=os.environ["TWITCH_BOT_NICK"],
         prefix="$",
@@ -64,7 +64,7 @@ async def start_bot():
     # show = DevMattersShow()
     # show.start()
     current_app.obs = obs.Connection()
-    asyncio.create_task(clicker.run())
+    # asyncio.create_task(clicker.run())
     print("started")
     #
     # async def next_prev():
@@ -151,16 +151,16 @@ async def post_current_slide():
         return "", 204
 
     html = BeautifulSoup(form.get("html"), 'html.parser')
-    title: PageElement = html.find("h2") or html.find("h3")
-    current_section_title = get_section_title(current_app.obs)
-    if title and event:
-        for section in event.sections:
-            if section.title == title.text and current_section_title != section.title:
-                await new_section(current_app.obs, section.title, section.byline)
-                links = html.find_all("a")
-                link: PageElement
-                for link in links:
-                    await current_app.bot.send(f"{link.text} - {link['href']}")
+    # title: PageElement = html.find("h2") or html.find("h3")
+    # current_section_title = get_section_title(current_app.obs)
+    # if title and event:
+    #     for section in event.sections:
+    #         if section.title == title.text and current_section_title != section.title:
+    #             # await new_section(current_app.obs, section.title, section.byline)
+    #             links = html.find_all("a")
+    #             link: PageElement
+    #             for link in links:
+    #                 await current_app.bot.send(f"{link.text} - {link['href']}")
 
     return "ok", 204
 
