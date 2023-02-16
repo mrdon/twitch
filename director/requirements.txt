@@ -122,17 +122,14 @@ text-unidecode==1.3
 toml==0.10.2
     # via hypercorn
 tomli==2.0.1
-    # via
-    #   black
-    #   obsws-python
-    #   pytest
+    # via pytest
 twitchio==2.4.0
     # via -r requirements.in
 typing-extensions==4.3.0
     # via twitchio
 websocket-client==1.4.1
     # via obsws-python
-werkzeug==2.2.2
+werkzeug==2.2.3
     # via quart
 wled==0.14.1
     # via -r requirements.in
